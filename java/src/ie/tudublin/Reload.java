@@ -17,20 +17,23 @@ public class Reload extends PApplet
     public void reloadButton()
     {
         stroke(0);
+        strokeWeight(2);
         fill(255, 0, 0);
-        rect(150, height -200, 200, 100);
+        rect(150, height - 170, 200, 100);
     }
 
     public void reloadBar()
     {
         stroke(0);
+        strokeWeight(2);
         fill(255, 0, 0);
         int sizeX = 170;
-        int sizeY;
+        int sizeY = height - 300;
         
-        for(sizeY = height - 350; sizeY < height - 100; sizeY--)
+        for(int s = 0; s < 6; s++)
         {
-            rect(sizeX, sizeY, 160, 100);
+            rect(sizeX, sizeY, 160, 70);
+            sizeY = sizeY - 70;
         }
     }
 
