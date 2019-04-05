@@ -6,7 +6,7 @@ public class Reload extends PApplet
 {
     public void setup()
     {
-       background(100);
+       //background(255);
     }
 
     public void settings()
@@ -26,7 +26,7 @@ public class Reload extends PApplet
     {
         stroke(0);
         strokeWeight(2);
-        fill(255, 0, 0);
+        fill(100);
         int sizeX = 170;
         int sizeY = height - 300;
         
@@ -35,10 +35,31 @@ public class Reload extends PApplet
             rect(sizeX, sizeY, 160, 70);
             sizeY = sizeY - 70;
         }
+
+
     }
 
+    public void viewer()
+    {
+        background(255);
+        stroke(255, 26, 26);
+        fill(255);
+        float cWH = random(450, 500);
+        for(int n = 0; n < 10; n++)
+        {
+            ellipse(((width/2) + 100) , height/2, cWH, cWH);
+        }
+    }
+
+    public void RandomButton()
+    {
+        stroke(0);
+        fill(random(255), random(255), random(255));
+        //rect()
+    }
     public void draw()
     {
+        viewer();
         reloadButton();
         reloadBar();
     }
