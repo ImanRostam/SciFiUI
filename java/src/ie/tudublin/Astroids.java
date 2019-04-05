@@ -24,10 +24,23 @@ public class Astroids extends UI
         x++;
     }
 
+    public void shot()
+    { 
+        if(mouseX == x || mouseY == y)
+        {
+            diameter -= 20;
+        }
+    }
+
     public void draw()
     {
         background(0);
         astroids();
         //move();
+    }
+
+    public void mousePressed()
+    {
+        shot();
     }
 }
