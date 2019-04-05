@@ -1,19 +1,24 @@
 package ie.tudublin;
 
-public class CircleView extends UI
-{
-    float x = width/2;
-    float y = height/2;
+import processing.core.PApplet;
 
-    float rotation;
+public class CircleView extends PApplet
+{
+    public void settings()
+    {
+    fullScreen();
+    }
 
     public void render()
     {
+    float x = width/2;
+    float y = height/2;
+
         for(int i = 0; i < 5; i++) 
         {
             noFill();
             stroke(255, 0, 0);
-            ellipse(x,y, i*(20), i*(20));
+            ellipse(x,y, i*(30), i*(30));
         }
     }
 
