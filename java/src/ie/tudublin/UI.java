@@ -4,9 +4,11 @@ import processing.core.PApplet;
 
 public class UI extends PApplet
 {
+    //Astroids a1;
+
    public void setup()
    {
-       background(0);
+       //a1 = new Astroids(random(width), random(height), 40);
    }
 
    public void settings()
@@ -16,6 +18,8 @@ public class UI extends PApplet
 
    public void draw()
    {
+    background(0);
+    //a1.display();
    }
 }
 

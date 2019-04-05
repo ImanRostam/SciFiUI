@@ -4,7 +4,7 @@ public class CircleView extends UI
 {
     public void settings()
     {
-    fullScreen();
+        fullScreen();
     }
 
     public void circle()
