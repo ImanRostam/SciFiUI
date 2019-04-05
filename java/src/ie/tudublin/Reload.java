@@ -44,23 +44,32 @@ public class Reload extends PApplet
         background(255);
         stroke(255, 26, 26);
         fill(255);
-        float cWH = random(450, 500);
+        float cWH = random(500, 550);
         for(int n = 0; n < 10; n++)
         {
-            ellipse(((width/2) + 100) , height/2, cWH, cWH);
+            ellipse((width/2) +100, height/2, cWH, cWH);
+            cWH++;
         }
     }
 
-    public void RandomButton()
+    public void randomButton()
     {
         stroke(0);
-        fill(random(255), random(255), random(255));
-        //rect()
+        fill(random(255));
+        int space = 80;
+        int buttonY = 50;
+        
+        for(int sp = 0; sp < 4; sp++)
+        {
+            rect(width - space, buttonY, 50, 50);
+            space = space + 80;
+        }
     }
     public void draw()
     {
         viewer();
         reloadButton();
         reloadBar();
+        randomButton();
     }
 }
