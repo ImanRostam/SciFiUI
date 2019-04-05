@@ -17,6 +17,13 @@ public class Main
 		
 	}
 
+	public void circleView()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new CircleView());
+		
+	}
+
 	// public static void main(String[] args)
 	// {
 	// 	Main main = new Main();
@@ -26,6 +33,6 @@ public class Main
 	public static void main(String[] args)
 	{
 		Main main = new Main();
-		main.reload();			
+		main.circleView();			
 	}
 }

@@ -6,7 +6,7 @@ public class UI extends PApplet
 {
    public void setup()
    {
-       background(100);
+       background(0);
    }
 
    public void settings()

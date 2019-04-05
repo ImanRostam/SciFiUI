@@ -1,8 +1,6 @@
 package ie.tudublin;
 
-import processing.core.PApplet;
-
-public class Reload extends PApplet
+public class Reload extends UI
 {
     public void setup()
     {
