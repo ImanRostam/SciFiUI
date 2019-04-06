@@ -13,7 +13,7 @@ public class ReloadButton extends UIElement
     {
         ui.stroke(0);
         ui.strokeWeight(2);
-        ui.fill(255, 0, 0);
-        ui.rect(150, ui.height - 170, 200, 100);
+        ui.fill(255, 0, 0, 70);
+        ui.rect(80, ui.height-170, 200, 100);
     }
 }

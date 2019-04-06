@@ -58,7 +58,7 @@ public class UI extends PApplet
     rBar.render();
 
     //Random Button
-    // randButton.render();
+    //randButton.render();
 
     //Frames
     frame.render();

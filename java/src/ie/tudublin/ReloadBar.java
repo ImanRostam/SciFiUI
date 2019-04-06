@@ -13,14 +13,14 @@ public class ReloadBar extends UIElement
     {
         ui.stroke(0);
         ui.strokeWeight(2);
-        ui.fill(100);
-        int sizeX = 170;
-        int sizeY = ui.height - 300;
+        ui.fill(100, 70);
+        int sizeX = 100;
+        int sizeY = ui.height - 250;
         
-        for(int s = 0; s < 6; s++)
+        for(int s = 0; s < 10; s++)
         {
-            ui.rect(sizeX, sizeY, 160, 70);
-            sizeY = sizeY - 70;
+            ui.rect(sizeX, sizeY, 150, 50);
+            sizeY = sizeY - 50;
         }
 
     }
