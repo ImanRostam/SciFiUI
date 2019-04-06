@@ -4,22 +4,26 @@ import processing.core.PApplet;
 
 public class UI extends PApplet
 {
-    //Astroids a1;
+    CircleView circleV;
+    ReloadButton rButton;
 
-   public void setup()
-   {
-       //a1 = new Astroids(random(width), random(height), 40);
-   }
+    public void setup()
+    {
+        circleV = new CircleView(50, 50, this);
+        rButton = new ReloadButton(50, 50, this);
+    }
 
-   public void settings()
-   {
+    public void settings()
+    {
     fullScreen();
-   }
+    }
 
-   public void draw()
-   {
+    public void draw()
+    {
     background(0);
-    //a1.display();
-   }
+
+    circleV.render();
+    rButton.render();
+    }
 }
 

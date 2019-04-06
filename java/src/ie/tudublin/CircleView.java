@@ -1,27 +1,24 @@
 package ie.tudublin;
 
-public class CircleView extends UI
+import processing.core.PApplet;
+
+public class CircleView extends UIElement
 {
-    public void settings()
+    public CircleView(float x, float y, PApplet ui) // constructor
     {
-        fullScreen();
+        super(x, y, ui);
     }
 
-    public void circle()
+    public void render()
     {
-        //background(255);
+        ui.background(255);
 
         for(int x = 0; x < 60; x = x + 10) 
         {
-            noFill();
-            stroke(255, 0, 0);
-            // ellipse(width/2, height/2, 500 +x, 500+ x);
-            ellipse(mouseX, mouseY, 500 +x, 500+ x);
+            ui.noFill();
+            ui.stroke(255, 0, 0);
+            ui.ellipse(ui.width/2 + 100, ui.height/2, 450 +x, 450+ x);
+            // ui.ellipse(ui.mouseX, ui.mouseY, 500 +x, 500+ x);
         }
-    }
-
-    public void draw()
-    {
-        circle();
     }
 }
