@@ -11,8 +11,6 @@ public class CircleView extends UIElement
 
     public void render()
     {
-        ui.background(255);
-
         for(int x = 0; x < 60; x = x + 10) 
         {
             ui.noFill();
