@@ -1,47 +1,21 @@
 package ie.tudublin;
 
-public class Astroids extends UI
+import processing.core.PApplet;
+
+public class Astroids extends UIElement
 {
-    float x = width/2;
-    float y = height/2;
-    float diameter = 60;
+    private float diameter;
 
-    public void settings()
+    public Astroids(float x, float y, PApplet ui, float diameter)
     {
-        fullScreen();
+        super(x, y, ui);
+        this.diameter = diameter;
     }
 
-    
-    public void astroids()
+    public void render()
     {
-        stroke(0);
-        fill(128, 43, 0);
-        ellipse(x, y, diameter, diameter);
-    }
-    
-    public void move()
-    {
-        y++;
-        x++;
-    }
-
-    public void shot()
-    { 
-        if(mouseX == x || mouseY == y)
-        {
-            diameter -= 20;
-        }
-    }
-
-    public void draw()
-    {
-        background(0);
-        astroids();
-        // move();
-    }
-
-    public void mousePressed()
-    {
-        shot();
+        ui.stroke(0);
+        ui.fill(128, 43, 0);
+        ui.ellipse(x, y, diameter, diameter);
     }
 }

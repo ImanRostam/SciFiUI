@@ -9,6 +9,7 @@ public class UI extends PApplet
     ReloadBar rBar;
     RandomButton randButton;
     Stars stars;
+    Astroids astroids;
 
     public void setup()
     {
@@ -17,6 +18,7 @@ public class UI extends PApplet
         rBar = new ReloadBar(50, 50, this);
         randButton = new RandomButton(50, 50, this);
         stars = new Stars(4, 4, this);
+        astroids = new Astroids(random(width), random(height), this, 60);
     }
 
     public void settings()
@@ -36,6 +38,7 @@ public class UI extends PApplet
     rButton.render();
     rBar.render();
     randButton.render();
+    astroids.render();
     }
 }
 
