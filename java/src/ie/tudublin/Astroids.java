@@ -19,9 +19,28 @@ public class Astroids extends UIElement
         ui.ellipse(x, y, diameter, diameter);
     }
 
-    public void move()
+    public void move1()
     {
         y++;
         x++;
+    }
+
+    public void move2()
+    {
+        y--;
+        x++;
+    }
+
+    public void shoot()
+    {
+        while(ui.mouseX == x || ui.mouseY == y)
+        {
+            diameter -= 20;
+        }
+    }
+
+    public void mouseClicked()
+    {
+        shoot();
     }
 }
