@@ -8,6 +8,7 @@ public class UI extends PApplet
     ReloadButton rButton;
     ReloadBar rBar;
     RandomButton randButton;
+    Stars stars;
 
     public void setup()
     {
@@ -15,6 +16,7 @@ public class UI extends PApplet
         rButton = new ReloadButton(50, 50, this);
         rBar = new ReloadBar(50, 50, this);
         randButton = new RandomButton(50, 50, this);
+        stars = new Stars(4, 4, this);
     }
 
     public void settings()
@@ -25,6 +27,7 @@ public class UI extends PApplet
     public void draw()
     {
     background(0);
+    stars.render();
 
     // System.out.println(width);
     // System.out.println(height);
