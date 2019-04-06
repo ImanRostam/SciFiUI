@@ -39,6 +39,7 @@ public class UI extends PApplet
     rBar.render();
     randButton.render();
     astroids.render();
+    astroids.move();
     }
 }
 

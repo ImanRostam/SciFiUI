@@ -18,4 +18,10 @@ public class Astroids extends UIElement
         ui.fill(128, 43, 0);
         ui.ellipse(x, y, diameter, diameter);
     }
+
+    public void move()
+    {
+        y++;
+        x++;
+    }
 }
