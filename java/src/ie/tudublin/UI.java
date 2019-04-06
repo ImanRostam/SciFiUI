@@ -7,12 +7,14 @@ public class UI extends PApplet
     CircleView circleV;
     ReloadButton rButton;
     ReloadBar rBar;
+    RandomButton randButton;
 
     public void setup()
     {
         circleV = new CircleView(50, 50, this);
         rButton = new ReloadButton(50, 50, this);
         rBar = new ReloadBar(50, 50, this);
+        randButton = new RandomButton(50, 50, this);
     }
 
     public void settings()
@@ -30,6 +32,7 @@ public class UI extends PApplet
     circleV.render();
     rButton.render();
     rBar.render();
+    randButton.render();
     }
 }
 
