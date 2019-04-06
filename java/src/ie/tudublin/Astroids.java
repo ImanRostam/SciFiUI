@@ -11,6 +11,7 @@ public class Astroids extends UI
         fullScreen();
     }
 
+    
     public void astroids()
     {
         stroke(0);
@@ -36,7 +37,7 @@ public class Astroids extends UI
     {
         background(0);
         astroids();
-        //move();
+        // move();
     }
 
     public void mousePressed()

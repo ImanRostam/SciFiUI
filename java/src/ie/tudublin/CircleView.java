@@ -9,16 +9,14 @@ public class CircleView extends UI
 
     public void circle()
     {
-    float x = width/2;
-    float y = height/2;
-    float space = 10;
+        //background(255);
 
-        for(float i = 0; i < 5; i++) 
+        for(int x = 0; x < 60; x = x + 10) 
         {
             noFill();
             stroke(255, 0, 0);
-            ellipse(x,y, 500, 500);
-            x = x + space ;
+            // ellipse(width/2, height/2, 500 +x, 500+ x);
+            ellipse(mouseX, mouseY, 500 +x, 500+ x);
         }
     }
 
