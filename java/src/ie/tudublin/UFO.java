@@ -7,13 +7,13 @@ public class UFO extends UIElement
     protected int colR, colG, colB;
     private boolean damage;
 
-    public UFO(float x, float y, PApplet ui, int eyeR, int eyeG, int eyeB)
+    public UFO(float x, float y, PApplet ui, int colR, int colG, int colB)
     {
         super(x, y, ui);
         this.damage = false;
-        this.colR = eyeR;
-        this.colG = eyeG;
-        this.colB = eyeB;
+        this.colR = colR;
+        this.colG = colG;
+        this.colB = colB;
     }
 
     public void render()
@@ -30,9 +30,11 @@ public class UFO extends UIElement
         ui.ellipse(x, y-20, 90, 90);
 
         // Alien
-        ui.fill(0, 128, 0);
-        ui.ellipse(x, y-30, 40, 50);
+        // ui.fill(0, 128, 0);
         ui.fill(colR, colG, colB);
+        ui.ellipse(x, y-30, 40, 50);
+        //ui.fill(colR, colG, colB);
+        ui.fill(0);
         ui.ellipse(x-10, y-40, 10, 5);
         ui.ellipse(x+10, y-40, 10, 5);
 
@@ -60,6 +62,4 @@ public class UFO extends UIElement
     public void setDamage(boolean damage) {
         this.damage = damage;
     }
-
-    // test
 }

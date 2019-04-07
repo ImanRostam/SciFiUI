@@ -21,10 +21,10 @@ public class UI extends PApplet
         element.add(new Frames(4, 4, this, 30));
         element.add(new RandomBar(50, 50, this));
 
-        // UFO
+        // UFO + Alien
         ufo.add(new UFO(random(width), random(height), this, 255, 0, 0));
         ufo.add(new UFO(random(width), random(height), this, 0, 0, 255));
-        ufo.add(new UFO(random(width), random(height), this, 255, 40, 0));
+        ufo.add(new UFO(random(width), random(height), this, 128, 0, 0));
 
         // Astroids
         ast.add(new Asteroids(random(width), random(height-100), this, 60, 128, 43, 0));
@@ -35,7 +35,7 @@ public class UI extends PApplet
 
     public void settings()
     {
-    fullScreen();
+        fullScreen();
     }
 
     float attack = -1;
@@ -56,7 +56,7 @@ public class UI extends PApplet
         for(UFO ship: ufo)
         {
             float d = dist(mouseX,mouseY,ship.x,ship.y);
-            if(d<150)
+            if(d<150 && d < 60)
             {
                 ship.setDamage(true);
             }
@@ -93,8 +93,6 @@ public class UI extends PApplet
             {
                 a.move2();
             }
-           
-            
         }
     
         for(UIElement el: element)
