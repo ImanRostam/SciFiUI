@@ -1,5 +1,7 @@
 package ie.tudublin;
 
+import java.util.ArrayList;
+
 import processing.core.PApplet;
 
 public class UI extends PApplet
@@ -9,7 +11,8 @@ public class UI extends PApplet
     ReloadBar rBar;
     RandomButton randButton;
     Stars stars;
-    Astroids ast1, ast2, ast3, ast4;
+    //Aestroids aest1, aest2, aest3, aest4;
+    ArrayList<Astroids> ast = new ArrayList<Astroids>();
     Frames frame;
 
     public void setup()
@@ -21,10 +24,16 @@ public class UI extends PApplet
         stars = new Stars(4, 4, this);
 
         // Astroids
-        ast1 = new Astroids(random(width), random(height), this, 60, 128, 43, 0);
-        ast2 = new Astroids(random(width), random(height), this, 60, 192, 192, 192);
-        ast3 = new Astroids(random(width), random(height), this, 60, 128, 43, 0);
-        ast4 = new Astroids(random(width), random(height), this, 60, 169, 169, 169);
+        /*aest1 = new Astroids(random(width), random(height-100), this, 60, 128, 43, 0);
+        aest2 = new Astroids(random(width-100), random(height), this, 60, 192, 192, 192);
+        aest3 = new Astroids(random(width-50), random(height), this, 60, 128, 43, 0);
+        aest4 = new Astroids(random(width), random(height), this, 60, 169, 169, 169);*/
+
+        ast.add(new Astroids(random(width), random(height-100), this, 60, 128, 43, 0));
+        ast.add(new Astroids(random(width-100), random(height), this, 60, 192, 192, 192));
+        ast.add(new Astroids(random(width-50), random(height), this, 60, 128, 43, 0));
+        ast.add(new Astroids(random(width), random(height), this, 60, 169, 169, 169));
+
         
         //Frames
         frame = new Frames(4, 4, this, 30);
@@ -35,39 +44,51 @@ public class UI extends PApplet
     fullScreen();
     }
 
+    // Make Aestroids smaller once clicked
+    public void mouseClicked()
+    {
+        float d = dist(aest1.x, aest1.y, aest1.diameter, aest1.diameter);
+        if(mouseX < d || mouseY < d)
+        {
+            aest1.diameter -= 20;
+        }
+    }
+
     public void draw()
     {
-    background(0);
+        background(0);
 
-    // Stars
-    stars.render();
+        // Stars
+        stars.render();
 
-    // Astroids
-    ast1.render();
-    ast2.render();
-    ast1.move1();
-    ast2.move2();
-    ast3.render();
-    ast4.render();
-    ast3.move1();
-    ast4.move2();
-    // ast1.shoot();
-    // ast2.shoot();
-    // ast1.mouseClicked();
-    // ast2.mouseClicked();
-    
-    // Target View
-    circleV.render();
+        // Astroids
+       // aest1.render();
+        //aest2.render();
+        // ast1.move1();
+        // ast2.move2();
+        // ast3.render();
+        // ast4.render();
+        // // ast3.move1();
+        // ast4.move2();
 
-    // Reload
-    rButton.render();
-    rBar.render();
+        for(Astroids a: ast)
+        {
+            a.render();
+        }
+        
+        // Target View
+        circleV.render();
 
-    //Random Button
-    // randButton.render();
+        // Reload
+        rButton.render();
+        rBar.render();
 
-    //Frames
-    frame.render();
+        //Random Button
+        randButton.render();
+
+        //Frames
+        frame.render();
     }
+
 }
 

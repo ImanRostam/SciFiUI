@@ -4,7 +4,7 @@ import processing.core.PApplet;
 
 public class Astroids extends UIElement
 {
-    private float diameter;
+    protected float diameter;
     private float r, g, b;
 
     public Astroids(float x, float y, PApplet ui, float diameter, float r, float g, float b)
@@ -19,7 +19,6 @@ public class Astroids extends UIElement
     public void render()
     {
         ui.stroke(0);
-        // ui.fill(128, 43, 0);
         ui.fill(r, g, b);
         ui.ellipse(x, y, diameter, diameter);
     }
@@ -36,16 +35,11 @@ public class Astroids extends UIElement
         x++;
     }
 
-    public void shoot()
-    {
-        while(ui.mouseX == x || ui.mouseY == y)
-        {
-            diameter -= 20;
-        }
-    }
-
-    public void mouseClicked()
-    {
-        shoot();
-    }
+    // public void shoot()
+    // {
+    //     while(ui.mouseX < x || ui.mouseY < y)
+    //     {
+    //         diameter -= 20;
+    //     }
+    // }
 }
