@@ -6,7 +6,7 @@ public class UFO extends UIElement
 {
     protected int colR, colG, colB;
     private boolean damage;
-    
+
     public UFO(float x, float y, PApplet ui, int eyeR, int eyeG, int eyeB)
     {
         super(x, y, ui);
@@ -60,4 +60,6 @@ public class UFO extends UIElement
     public void setDamage(boolean damage) {
         this.damage = damage;
     }
+
+    // test
 }

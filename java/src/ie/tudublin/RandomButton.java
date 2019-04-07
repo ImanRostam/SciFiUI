@@ -21,8 +21,5 @@ public class RandomButton extends UIElement
             ui.rect(ui.width - space, buttonY, 50, 50);
             space = space + 60;
         }
-
-        // Test
-        
     }
 }
