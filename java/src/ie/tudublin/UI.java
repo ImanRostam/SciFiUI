@@ -20,8 +20,9 @@ public class UI extends PApplet
         element.add(new Frames(4, 4, this, 30));
 
         // UFO
-        ufo.add(new UFO(width/2, height/2, this));
-        ufo.add(new UFO(width/2, height/2, this));
+        ufo.add(new UFO(random(width), random(height), this, 255, 0, 0));
+        ufo.add(new UFO(random(width), random(height), this, 0, 0, 255));
+        ufo.add(new UFO(random(width), random(height), this, 255, 40, 0));
 
         // Astroids
         ast.add(new Asteroids(random(width), random(height-100), this, 60, 128, 43, 0));
@@ -35,10 +36,10 @@ public class UI extends PApplet
     fullScreen();
     }
 
-    // Make Aestroids smaller once clicked
     float attack = -1;
     public void mouseClicked()
     {
+        // Attack Asteroids
         for(Asteroids a:ast)
         {
             float d = dist(mouseX,mouseY,a.x,a.y);
@@ -48,6 +49,8 @@ public class UI extends PApplet
                  attack = a.x;
             }
         }
+
+        // Attack UFO
         for(UFO ship: ufo)
         {
             float d = dist(mouseX,mouseY,ship.x,ship.y);
