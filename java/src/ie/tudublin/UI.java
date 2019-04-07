@@ -45,12 +45,16 @@ public class UI extends PApplet
     }
 
     // Make Aestroids smaller once clicked
+    float attack = -1;
     public void mouseClicked()
     {
-        float d = dist(aest1.x, aest1.y, aest1.diameter, aest1.diameter);
-        if(mouseX < d || mouseY < d)
+        for(Astroids a:ast)
         {
-            aest1.diameter -= 20;
+            float d = dist(mouseX,mouseY,a.x,a.y);
+            if(d<a.diameter)
+            {
+                 attack = a.x;
+            }
         }
     }
 
@@ -62,18 +66,34 @@ public class UI extends PApplet
         stars.render();
 
         // Astroids
-       // aest1.render();
-        //aest2.render();
+        // aest1.render();
+        // aest2.render();
         // ast1.move1();
         // ast2.move2();
         // ast3.render();
         // ast4.render();
-        // // ast3.move1();
+        // ast3.move1();
         // ast4.move2();
 
         for(Astroids a: ast)
         {
             a.render();
+            float move = random(0,1);
+            if(move == 0)
+            {
+                a.move1();
+                
+            }
+            else
+            {
+                a.move2();
+            }
+            if(attack == a.x)
+            {
+                a.diameter -= 20;
+                attack = -1;
+            }
+            
         }
         
         // Target View

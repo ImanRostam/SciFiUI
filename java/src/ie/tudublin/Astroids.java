@@ -25,14 +25,14 @@ public class Astroids extends UIElement
 
     public void move1()
     {
-        y++;
-        x++;
+        y = y + 0.5f;
+        x = x + 0.5f;
     }
 
     public void move2()
     {
-        y--;
-        x++;
+        y = y - 0.5f;
+        x = x + 0.5f;
     }
 
     // public void shoot()
