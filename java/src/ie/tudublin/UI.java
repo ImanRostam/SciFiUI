@@ -26,6 +26,7 @@ public class UI extends PApplet
         ufo.add(new UFO(random(width), random(height), this, 255, 0, 0));
         ufo.add(new UFO(random(width), random(height), this, 0, 0, 255));
         ufo.add(new UFO(random(width), random(height), this, 128, 0, 0));
+        ufo.add(new UFO(random(width), random(height), this, 255, 192, 203));
 
         // Astroids
         ast.add(new Asteroids(random(width), random(height-100), this, 60, 128, 43, 0));
@@ -82,15 +83,15 @@ public class UI extends PApplet
             float move = random(0,1);
             if(attack == a.x)
             {
-              a.diameter -= 20;
-             attack = -1;
+                a.diameter -= 20;
+                attack = -1;
             }
             if(move == 0)
             {
                 a.move1();
-                
             }
-            else
+
+            if(move == 0)
             {
                 a.move2();
             }

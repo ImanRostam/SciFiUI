@@ -45,8 +45,14 @@ public class UFO extends UIElement
 
     public void move()
     {
-        y = y + 0.5f;
-        x = x + 0.5f;
+        y = y + 2;
+        x = x + 2;
+
+        if(x>ui.width)
+        {
+            y = 0;
+            x = 0+ui.random(ui.width);
+        }
     }
 
     /**
