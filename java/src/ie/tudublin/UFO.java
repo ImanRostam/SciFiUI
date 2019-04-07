@@ -22,7 +22,6 @@ public class UFO extends UIElement
         ui.fill(0);
         ui.ellipse(x, y-20, 90, 90);
 
-        
         // Alien
         ui.fill(0, 128, 0);
         ui.ellipse(x, y-30, 40, 50);
@@ -33,7 +32,6 @@ public class UFO extends UIElement
         // UFO Body Frame
         ui.fill(120);
         ui.ellipse(x, y, 150, 60);
-
     }
 
     public void move()
