@@ -18,6 +18,7 @@ public class UI extends PApplet
         element.add(new RandomButton(50, 50, this));
         element.add(new Stars(4, 4, this));
         element.add(new Frames(4, 4, this, 30));
+        element.add(new RandomBar(50, 50, this));
 
         // UFO
         ufo.add(new UFO(random(width), random(height), this, 255, 0, 0));

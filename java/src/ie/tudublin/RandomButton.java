@@ -12,7 +12,7 @@ public class RandomButton extends UIElement
     public void render()
     {
         ui.stroke(0);
-        ui.fill(ui.random(255), ui.random(255), ui.random(255));
+        ui.fill(0, 0, 255, 100);
         int space = 100;
         int buttonY = 50;
         
