@@ -48,6 +48,14 @@ public class UI extends PApplet
                  attack = a.x;
             }
         }
+        for(UFO ship: ufo)
+        {
+            float d = dist(mouseX,mouseY,ship.x,ship.y);
+            if(d<150)
+            {
+                ship.setDamage(true);
+            }
+        }
     }
 
     public void draw()
@@ -55,8 +63,11 @@ public class UI extends PApplet
         background(0);
         for (UFO ufo: ufo)
         {
-            ufo.render();
-            ufo.move();
+            if(ufo.isDamage() == false)
+            {
+                ufo.render();
+                ufo.move();
+            }
         }
 
         for(Asteroids a: ast)

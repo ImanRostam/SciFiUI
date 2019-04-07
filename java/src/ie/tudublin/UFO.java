@@ -4,9 +4,11 @@ import processing.core.PApplet;
 
 public class UFO extends UIElement
 {
+    private boolean damage;
     public UFO(float x, float y, PApplet ui)
     {
         super(x, y, ui);
+        this.damage = damage;
     }
 
     public void render()
@@ -36,7 +38,21 @@ public class UFO extends UIElement
 
     public void move()
     {
-        y = y + 3;
-        x = x + 3;
+        y = y + 0.5f;
+        x = x + 0.5f;
+    }
+
+    /**
+     * @return the damage
+     */
+    public boolean isDamage() {
+        return damage;
+    }
+
+    /**
+     * @param damage the damage to set
+     */
+    public void setDamage(boolean damage) {
+        this.damage = damage;
     }
 }
