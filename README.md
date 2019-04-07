@@ -1,8 +1,8 @@
 # SciFi UI Project
 
-Name:
+Name: Iman Rostam
 
-Student Number: 
+Student Number: C17367011
 
 Fork this repository and use it a starter project for your assignment
 
