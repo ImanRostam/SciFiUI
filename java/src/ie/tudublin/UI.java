@@ -7,6 +7,7 @@ import processing.core.PApplet;
 public class UI extends PApplet
 {
     ArrayList<UIElement> element = new ArrayList<UIElement>();
+    ArrayList<UFO> ufo = new ArrayList<UFO>();
     ArrayList<Asteroids> ast = new ArrayList<Asteroids>();
 
     public void setup()
@@ -17,7 +18,9 @@ public class UI extends PApplet
         element.add(new RandomButton(50, 50, this));
         element.add(new Stars(4, 4, this));
         element.add(new Frames(4, 4, this, 30));
-        element.add(new UFO(width/2, height/2, this));
+
+        // UFO
+        ufo.add(new UFO(width/2, height/2, this));
 
         // Astroids
         ast.add(new Asteroids(random(width), random(height-100), this, 60, 128, 43, 0));
@@ -49,20 +52,25 @@ public class UI extends PApplet
     public void draw()
     {
         background(0);
+        for (UFO ufo: ufo)
+        {
+            ufo.render();
+            ufo.move();
+        }
 
         for(Asteroids a: ast)
         {
             a.render();
-            // float move = random(0,1);
-            // if(move == 0)
-            // {
-            //     a.move1();
+            float move = random(0,1);
+            if(move == 0)
+            {
+                a.move1();
                 
-            // }
-            // else
-            // {
-            //     a.move2();
-            // }
+            }
+            else
+            {
+                a.move2();
+            }
             if(attack == a.x)
             {
                 a.diameter -= 20;
