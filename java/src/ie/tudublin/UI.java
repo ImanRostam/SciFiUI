@@ -6,33 +6,35 @@ import processing.core.PApplet;
 
 public class UI extends PApplet
 {
-    Scope circleV;
+    /*Scope circleV;
     ReloadButton rButton;
     ReloadBar rBar;
     RandomButton randButton;
-    Stars stars;
+    Stars stars;*/
+    ArrayList<UIElement> element = new ArrayList<UIElement>();
     //Aestroids aest1, aest2, aest3, aest4;
-    ArrayList<Astroids> ast = new ArrayList<Astroids>();
+    ArrayList<Asteroids> ast = new ArrayList<Asteroids>();
     Frames frame;
 
     public void setup()
     {
-        circleV = new Scope(50, 50, this);
-        rButton = new ReloadButton(50, 50, this);
-        rBar = new ReloadBar(50, 50, this);
-        randButton = new RandomButton(50, 50, this);
-        stars = new Stars(4, 4, this);
+        // circleV = new Scope(50, 50, this);
+        // rButton = new ReloadButton(50, 50, this);
+        // rBar = new ReloadBar(50, 50, this);
+        // randButton = new RandomButton(50, 50, this);
+        // stars = new Stars(4, 4, this);
+
+        element.add(new Scope(50, 50, this));
+        element.add(new ReloadButton(50, 50, this));
+        element.add( new ReloadBar(50, 50, this));
+        element.add(new RandomButton(50, 50, this));
+        element.add(new Stars(4, 4, this));
 
         // Astroids
-        /*aest1 = new Astroids(random(width), random(height-100), this, 60, 128, 43, 0);
-        aest2 = new Astroids(random(width-100), random(height), this, 60, 192, 192, 192);
-        aest3 = new Astroids(random(width-50), random(height), this, 60, 128, 43, 0);
-        aest4 = new Astroids(random(width), random(height), this, 60, 169, 169, 169);*/
-
-        ast.add(new Astroids(random(width), random(height-100), this, 60, 128, 43, 0));
-        ast.add(new Astroids(random(width-100), random(height), this, 60, 192, 192, 192));
-        ast.add(new Astroids(random(width-50), random(height), this, 60, 128, 43, 0));
-        ast.add(new Astroids(random(width), random(height), this, 60, 169, 169, 169));
+        ast.add(new Asteroids(random(width), random(height-100), this, 60, 128, 43, 0));
+        ast.add(new Asteroids(random(width-100), random(height), this, 60, 192, 192, 192));
+        ast.add(new Asteroids(random(width-50), random(height), this, 60, 128, 43, 0));
+        ast.add(new Asteroids(random(width), random(height), this, 60, 169, 169, 169));
 
         
         //Frames
@@ -48,9 +50,10 @@ public class UI extends PApplet
     float attack = -1;
     public void mouseClicked()
     {
-        for(Astroids a:ast)
+        for(Asteroids a:ast)
         {
             float d = dist(mouseX,mouseY,a.x,a.y);
+
             if(d<a.diameter)
             {
                  attack = a.x;
@@ -63,7 +66,7 @@ public class UI extends PApplet
         background(0);
 
         // Stars
-        stars.render();
+       // stars.render();
 
         // Astroids
         // aest1.render();
@@ -75,7 +78,7 @@ public class UI extends PApplet
         // ast3.move1();
         // ast4.move2();
 
-        for(Astroids a: ast)
+        for(Asteroids a: ast)
         {
             a.render();
             float move = random(0,1);
@@ -97,7 +100,7 @@ public class UI extends PApplet
         }
         
         // Target View
-        circleV.render();
+        /*circleV.render();
 
         // Reload
         rButton.render();
@@ -107,7 +110,12 @@ public class UI extends PApplet
         randButton.render();
 
         //Frames
-        frame.render();
+        frame.render();*/
+
+        for(UIElement el: element)
+        {
+            el.render();
+        }
     }
 
 }
