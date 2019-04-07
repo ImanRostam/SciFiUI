@@ -9,7 +9,7 @@ public class UI extends PApplet
     ReloadBar rBar;
     RandomButton randButton;
     Stars stars;
-    Astroids ast1, ast2;
+    Astroids ast1, ast2, ast3, ast4;
     Frames frame;
 
     public void setup()
@@ -21,8 +21,10 @@ public class UI extends PApplet
         stars = new Stars(4, 4, this);
 
         // Astroids
-        ast1 = new Astroids(random(width), random(height), this, 60);
-        ast2 = new Astroids(random(width), random(height), this, 60);
+        ast1 = new Astroids(random(width), random(height), this, 60, 128, 43, 0);
+        ast2 = new Astroids(random(width), random(height), this, 60, 192, 192, 192);
+        ast3 = new Astroids(random(width), random(height), this, 60, 128, 43, 0);
+        ast4 = new Astroids(random(width), random(height), this, 60, 169, 169, 169);
         
         //Frames
         frame = new Frames(4, 4, this, 30);
@@ -45,10 +47,14 @@ public class UI extends PApplet
     ast2.render();
     ast1.move1();
     ast2.move2();
-    ast1.shoot();
-    ast2.shoot();
-    ast1.mouseClicked();
-    ast2.mouseClicked();
+    ast3.render();
+    ast4.render();
+    ast3.move1();
+    ast4.move2();
+    // ast1.shoot();
+    // ast2.shoot();
+    // ast1.mouseClicked();
+    // ast2.mouseClicked();
     
     // Target View
     circleV.render();
@@ -58,7 +64,7 @@ public class UI extends PApplet
     rBar.render();
 
     //Random Button
-    //randButton.render();
+    // randButton.render();
 
     //Frames
     frame.render();
