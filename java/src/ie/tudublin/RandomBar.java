@@ -17,11 +17,11 @@ public class RandomBar extends UIElement
         ui.stroke(120);
         ui.strokeWeight(2);
 
-        for(int s = 0; s < 6; s++)
+        for(int s = 0; s < 5; s++)
         {
-            ui.rect(ui.width - space, ui.height - 50, 50, -200+length);
+            ui.rect(ui.width - space, ui.height - 200, 50, -130+length);
             space = space + 60;
-            length = length + 30;
+            length = length + 20;
         }
     }
 }

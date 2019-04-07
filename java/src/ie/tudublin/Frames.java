@@ -26,11 +26,11 @@ public class Frames extends UIElement
         ui.line(ui.width-space, space, ui.width-space, space+40); // V
         
         // Bottom Left Frame
-        ui.line(space, ui.height-space, space+40, ui.height-space); // H
-        ui.line(space, ui.height-space, space, ui.height-70); // V
+        ui.line(space, ui.height-180, space+40, ui.height-180); // H
+        ui.line(space, ui.height-220, space, ui.height-180); // V
 
         // Bottom Right Frame
-        ui.line(ui.width-space, ui.height-space, ui.width-70, ui.height-space); // H
-        ui.line(ui.width-space, ui.height-space, ui.width-space, ui.height-70); // V
+        ui.line(ui.width-space, ui.height-180, ui.width-70, ui.height-180); // H
+        ui.line(ui.width-space, ui.height-180, ui.width-space, ui.height-220); // V
     }
 }

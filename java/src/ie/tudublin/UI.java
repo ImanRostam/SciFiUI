@@ -47,7 +47,7 @@ public class UI extends PApplet
         {
             float d = dist(mouseX,mouseY,a.x,a.y);
 
-            if(d<a.diameter)
+            if(d<a.diameter && d<a.diameter)
             {
                  attack = a.x;
             }
