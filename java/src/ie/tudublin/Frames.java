@@ -16,6 +16,7 @@ public class Frames extends UIElement
     {
         ui.stroke(255, 0, 0, 70);
         ui.strokeWeight(3);
+
         // Top Left frame
         ui.line(space, space, space+40, space); // H
         ui.line(space, space, space, space+40); // V
@@ -31,6 +32,5 @@ public class Frames extends UIElement
         // Bottom Right Frame
         ui.line(ui.width-space, ui.height-space, ui.width-70, ui.height-space); // H
         ui.line(ui.width-space, ui.height-space, ui.width-space, ui.height-70); // V
-        // ui.line(x1, y1, x2, y2);
     }
 }
