@@ -90,8 +90,7 @@ public class UI extends PApplet
             {
                 a.move1();
             }
-
-            if(move == 0)
+            else
             {
                 a.move2();
             }

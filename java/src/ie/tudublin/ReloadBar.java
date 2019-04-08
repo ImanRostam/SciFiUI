@@ -15,9 +15,9 @@ public class ReloadBar extends UIElement
         ui.strokeWeight(2);
         ui.fill(100, 200);
         int sizeX = 70;
-        int sizeY = ui.height - 400;
+        int sizeY = ui.height - 365;
         
-        for(int s = 0; s < 7; s++)
+        for(int s = 0; s < 8; s++)
         {
             ui.rect(sizeX, sizeY, 100, 50);
             sizeY = sizeY - 50;
