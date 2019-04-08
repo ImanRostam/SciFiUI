@@ -1,28 +1,44 @@
 package ie.tudublin;
 
+import static processing.core.PConstants.PI;
+
 import processing.core.PApplet;
 
-public class Scope extends UIElement
-{
+public class Scope extends UIElement {
     public Scope(float x, float y, PApplet ui) // constructor
     {
         super(x, y, ui);
     }
 
-    public void render()
-    {
-        for(int x = 0; x < 60; x = x + 10) 
-        {
+    float rotation;
+
+    public void render() {
+        for (int x = 0; x < 60; x = x + 10) {
             ui.noFill();
             ui.stroke(255, 0, 0, 70);
             ui.strokeWeight(2);
-            //ui.ellipse(ui.width/2 + 100, ui.height/2, 450 +x, 450+ x);
-            ui.ellipse(ui.mouseX, ui.mouseY, 300 +x, 300+ x);
+            // ui.ellipse(ui.width/2 + 100, ui.height/2, 450 +x, 450+ x);
+            ui.ellipse(ui.mouseX, ui.mouseY, 300 + x, 300 + x);
         }
 
+        ui.pushMatrix();
+        ui.translate(x, y);
+        ui.rotate(rotation);
+
+        int arcS = 300;
+        for (int a = 0; a < 5; a++) 
+        {
+            ui.stroke(0 + (a*100), 0 + (a*150), (0 +a*200));
+            ui.arc(ui.mouseX-550, ui.mouseY-250, arcS, arcS, 0, PI);
+            arcS += 10;
+        }
+        ui.popMatrix();
+        rotation += 0.2f;
+
+
         ui.stroke(255, 0, 0, 70);
-        ui.ellipse(ui.mouseX, ui.mouseY, 60, 60);
-        ui.ellipse(ui.mouseX, ui.mouseY, 10, 10);
+        ui.ellipse(ui.mouseX, ui.mouseY, 50, 50);
+        ui.ellipse(ui.mouseX, ui.mouseY, 5, 5);
 
     }
 }
