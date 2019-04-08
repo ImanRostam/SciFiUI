@@ -22,6 +22,8 @@ public class UI extends PApplet
         element.add(new RandomBar(50, 50, this));
         element.add(new ControlPanel(0, 0, this));
         element.add(new Grid(0, 0, this));
+        element.add(new UnknownObjects1(0, 0, this));
+        element.add(new UnknownObjects2(0, 0, this));
 
         // UFO + Alien
         ufo.add(new UFO(random(width), random(height), this, 255, 0, 0));
