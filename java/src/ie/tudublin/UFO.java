@@ -68,4 +68,8 @@ public class UFO extends UIElement
     public void setDamage(boolean damage) {
         this.damage = damage;
     }
+
+    // IDEA
+    // When clicked on it - it will show a message from the Alien
+    // When press letter S and the mouse is at it - it will shot the Alien 
 }

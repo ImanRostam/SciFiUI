@@ -11,9 +11,23 @@ public class CircularFrame extends UIElement
 
     public void render()
     {
+        // Control Panel - Oval
         ui.stroke(225);
         ui.strokeWeight(2);
         ui.fill(30);
         ui.ellipse(ui.width/2, ui.height+50, ui.width+100, ui.height-300);
+
+        // Control Panel - Big Box
+        ui.stroke(0);
+        ui.fill(0);
+        ui.rect(ui.width-900, ui.height-100, 400, 370);
+
+        // Control Panel - Smaller Box
+        ui.fill(140);
+        ui.rect(ui.width-880, ui.height-80, 360, 320);
+
+        // Bolts
+
+
     }
 }
