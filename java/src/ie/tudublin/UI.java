@@ -26,7 +26,7 @@ public class UI extends PApplet
         ufo.add(new UFO(random(width), random(height), this, 255, 0, 0));
         ufo.add(new UFO(random(width), random(height), this, 0, 0, 255));
         ufo.add(new UFO(random(width), random(height), this, 128, 0, 0));
-        ufo.add(new UFO(random(width), random(height), this, 255, 192, 203));
+        ufo.add(new UFO(random(width), random(height), this, 0, 255, 0));
 
         // Astroids
         ast.add(new Asteroids(random(width), random(height-100), this, 60, 128, 43, 0));
@@ -68,6 +68,8 @@ public class UI extends PApplet
     public void draw()
     {
         background(0);
+        colorMode(RGB);
+        
         for (UFO ufo: ufo)
         {
             if(ufo.isDamage() == false)

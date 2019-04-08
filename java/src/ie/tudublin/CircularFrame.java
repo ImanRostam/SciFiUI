@@ -27,7 +27,10 @@ public class CircularFrame extends UIElement
         ui.rect(ui.width-880, ui.height-80, 360, 320);
 
         // Bolts
+        int space =0;
 
-
+        ui.fill(200);
+        ui.stroke(0);
+        ui.ellipse(ui.width-890, ui.height-88, 15, 15+space);
     }
 }
