@@ -25,13 +25,25 @@ public class Asteroids extends UIElement
 
     public void move1()
     {
-        y = y + 1;
-        x = x + 1;
+        y = y + 2;
+        x = x + 2;
+
+        if(x < 0 || x> ui.width)
+        {
+            y = ui.height;
+            x = 0+ui.random(ui.width);
+        }
     }
 
     public void move2()
     {
-        y = y - 1;
-        x = x - 1;
+        y = y - 2;
+        x = x - 2;
+
+        if(x < 0 || x> ui.width)
+        {
+            y = ui.height;
+            x = 0+ui.random(ui.width);
+        }
     }
 }
