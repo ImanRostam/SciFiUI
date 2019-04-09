@@ -1,6 +1,6 @@
 package ie.tudublin;
 
-// import static processing.core.PConstants.PI;
+import static processing.core.PConstants.PI;
 
 import processing.core.PApplet;
 
@@ -21,19 +21,19 @@ public class Scope extends UIElement {
             ui.ellipse(ui.mouseX, ui.mouseY, 300 + x, 300 + x);
         }
 
-        // ui.pushMatrix();
-        // ui.translate(x, y);
-        // ui.rotate(rotation);
+        ui.pushMatrix();
+        ui.translate(ui.mouseX, ui.mouseY);
+        ui.rotate(rotation);
 
-        // int arcS = 300;
-        // for (int a = 0; a < 5; a++) 
-        // {
-        //     ui.stroke(0 + (a*100), 0 + (a*150), (0 +a*200));
-        //     ui.arc(ui.mouseX-550, ui.mouseY-250, arcS, arcS, 0, PI);
-        //     arcS += 10;
-        // }
-        // ui.popMatrix();
-        // rotation += 0.2f;
+        int arcS = 300;
+        for (int a = 0; a < 5; a++) 
+        {
+            ui.stroke(0 + (a*30), 0 + (a*50), (0 +a*70));
+            ui.arc(0, 0, arcS, arcS, 0, PI);
+            arcS += 10;
+        }
+        ui.popMatrix();
+        rotation += 0.2f;
 
 
         ui.stroke(255, 0, 0, 70);

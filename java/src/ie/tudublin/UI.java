@@ -13,7 +13,7 @@ public class UI extends PApplet
     public void setup()
     {
         // All the Shapes
-        element.add(new Scope(50, 50, this));
+        element.add(new Scope(60, 60, this));
         element.add(new ReloadButton(50, 50, this));
         element.add(new ReloadBar(50, 50, this));
         element.add(new RandomButton(50, 50, this));
