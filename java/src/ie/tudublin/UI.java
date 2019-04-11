@@ -30,13 +30,13 @@ public class UI extends PApplet
         ufo1.add(new UFO1(random(width), random(height), this, 255, 0, 0));
         ufo1.add(new UFO1(random(width), random(height), this, 0, 0, 255));
         ufo1.add(new UFO1(random(width), random(height), this, 128, 0, 0));
-        ufo1.add(new UFO1(random(width), random(height), this, 0, 255, 0));
+        ufo1.add(new UFO1(random(width), random(height), this, 255, 255, 102));
 
         // UFO2  + Alien
+        ufo2.add(new UFO2(random(width), random(height), this, 204, 153, 255));
         ufo2.add(new UFO2(random(width), random(height), this, 0, 255, 0));
-        ufo2.add(new UFO2(random(width), random(height), this, 0, 255, 0));
-        ufo2.add(new UFO2(random(width), random(height), this, 0, 255, 0));
-        ufo2.add(new UFO2(random(width), random(height), this, 0, 255, 0));
+        ufo2.add(new UFO2(random(width), random(height), this, 0, 179, 179));
+        ufo2.add(new UFO2(random(width), random(height), this, 138, 138, 92));
 
         // Astroids
         ast.add(new Asteroids(random(width), random(height-100), this, 60, 128, 43, 0));

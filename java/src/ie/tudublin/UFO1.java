@@ -30,7 +30,6 @@ public class UFO1 extends UIElement
         ui.ellipse(x, y-20, 90, 90);
 
         // Alien
-        // ui.fill(0, 128, 0);
         ui.fill(colR, colG, colB);
         ui.ellipse(x, y-30, 40, 50);
         //ui.fill(colR, colG, colB);

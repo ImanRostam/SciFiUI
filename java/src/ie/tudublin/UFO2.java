@@ -23,24 +23,34 @@ public class UFO2 extends UIElement
 
         // UFO Head Frame
         ui.fill(120);
-        ui.ellipse(x, y-20, 100, 100);
+        ui.ellipse(x, y-20, 85, 85);
 
         // UFO Inside Frame
+        ui.strokeWeight(2);
+        ui.stroke(0);
         ui.fill(0);
-        ui.ellipse(x, y-20, 90, 90);
+        ui.ellipse(x, y-20, 75, 75);
+
+        // Alien antenna
+        ui.strokeWeight(2);
+        ui.stroke(255);
+        ui.line(x, y, x-10, y-45);
+        ui.line(x, y, x, y-47);
+        ui.line(x, y, x+10, y-45);
+        
 
         // Alien
-        // ui.fill(0, 128, 0);
+        ui.stroke(0);
         ui.fill(colR, colG, colB);
-        ui.ellipse(x, y-30, 40, 50);
-        //ui.fill(colR, colG, colB);
+        ui.ellipse(x, y-10, 50, 60);
         ui.fill(0);
-        ui.ellipse(x-10, y-40, 10, 5);
-        ui.ellipse(x+10, y-40, 10, 5);
+        ui.ellipse(x-5, y-25, 10, 13);
+        ui.ellipse(x+7, y-25, 10, 13);
 
         // UFO Body Frame
+        ui.strokeWeight(1);
         ui.fill(120);
-        ui.ellipse(x, y, 150, 60);
+        ui.ellipse(x, y, 100, 42);
     }
 
     public void move2()
