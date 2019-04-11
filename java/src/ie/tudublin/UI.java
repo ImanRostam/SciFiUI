@@ -7,7 +7,8 @@ import processing.core.PApplet;
 public class UI extends PApplet
 {
     ArrayList<UIElement> element = new ArrayList<UIElement>();
-    ArrayList<UFO> ufo = new ArrayList<UFO>();
+    ArrayList<UFO1> ufo1 = new ArrayList<UFO1>();
+    ArrayList<UFO2> ufo2 = new ArrayList<UFO2>();
     ArrayList<Asteroids> ast = new ArrayList<Asteroids>();
 
     public void setup()
@@ -25,11 +26,17 @@ public class UI extends PApplet
         element.add(new UnknownObjects1(0, 0, this));
         element.add(new UnknownObjects2(0, 0, this));
 
-        // UFO + Alien
-        ufo.add(new UFO(random(width), random(height), this, 255, 0, 0));
-        ufo.add(new UFO(random(width), random(height), this, 0, 0, 255));
-        ufo.add(new UFO(random(width), random(height), this, 128, 0, 0));
-        ufo.add(new UFO(random(width), random(height), this, 0, 255, 0));
+        // UFO1 + Alien
+        ufo1.add(new UFO1(random(width), random(height), this, 255, 0, 0));
+        ufo1.add(new UFO1(random(width), random(height), this, 0, 0, 255));
+        ufo1.add(new UFO1(random(width), random(height), this, 128, 0, 0));
+        ufo1.add(new UFO1(random(width), random(height), this, 0, 255, 0));
+
+        // UFO2  + Alien
+        ufo2.add(new UFO2(random(width), random(height), this, 0, 255, 0));
+        ufo2.add(new UFO2(random(width), random(height), this, 0, 255, 0));
+        ufo2.add(new UFO2(random(width), random(height), this, 0, 255, 0));
+        ufo2.add(new UFO2(random(width), random(height), this, 0, 255, 0));
 
         // Astroids
         ast.add(new Asteroids(random(width), random(height-100), this, 60, 128, 43, 0));
@@ -58,7 +65,16 @@ public class UI extends PApplet
         }
 
         // Attack UFO
-        for(UFO ship: ufo)
+        for(UFO1 ship: ufo1)
+        {
+            float d = dist(mouseX,mouseY,ship.x,ship.y);
+            if(d<150 && d < 60)
+            {
+                ship.setDamage(true);
+            }
+        }
+
+        for(UFO2 ship: ufo2)
         {
             float d = dist(mouseX,mouseY,ship.x,ship.y);
             if(d<150 && d < 60)
@@ -72,12 +88,21 @@ public class UI extends PApplet
     {
         background(0);
         
-        for (UFO ufo: ufo)
+        for (UFO1 ufo1: ufo1)
+        {
+            if(ufo1.isDamage() == false)
+            {
+                ufo1.render();
+                ufo1.move1();
+            }
+        }
+
+        for (UFO2 ufo: ufo2)
         {
             if(ufo.isDamage() == false)
             {
                 ufo.render();
-                ufo.move();
+                ufo.move2();
             }
         }
 

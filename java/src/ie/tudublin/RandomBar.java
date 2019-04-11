@@ -19,6 +19,7 @@ public class RandomBar extends UIElement
 
         for(int s = 0; s < 5; s++)
         {
+            ui.fill((ui.mouseX * 0.1f), (ui.mouseY * 0.3f), (s * 0.5f));
             ui.rect(ui.width - space, ui.height - 200, 50, -130+length);
             space = space + 60;
             length = length + 20;

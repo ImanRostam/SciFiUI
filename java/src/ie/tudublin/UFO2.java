@@ -2,12 +2,12 @@ package ie.tudublin;
 
 import processing.core.PApplet;
 
-public class UFO extends UIElement
+public class UFO2 extends UIElement
 {
     protected int colR, colG, colB;
     private boolean damage;
 
-    public UFO(float x, float y, PApplet ui, int colR, int colG, int colB)
+    public UFO2(float x, float y, PApplet ui, int colR, int colG, int colB)
     {
         super(x, y, ui);
         this.damage = false;
@@ -43,15 +43,15 @@ public class UFO extends UIElement
         ui.ellipse(x, y, 150, 60);
     }
 
-    public void move()
+    public void move2()
     {
-        y = y + 2;
-        x = x + 2;
+        y = y - 5;
+        x = x - 5;
 
-        if(x>ui.width)
+        if(y>ui.height || x<0)
         {
-            y = 0;
             x = 0+ui.random(ui.width);
+            y = ui.height;
         }
     }
 

@@ -25,10 +25,10 @@ public class Scope extends UIElement {
         ui.translate(ui.mouseX, ui.mouseY);
         ui.rotate(rotation);
 
-        int arcS = 300;
-        for (int a = 0; a < 5; a++) 
+        int arcS = 280;
+        for (int a = 0; a < 7; a++) 
         {
-            ui.stroke(0 + (a*30), 0 + (a*50), (0 +a*70));
+            ui.stroke(0 + (a*30), 0 + (a*50), (0 +a*70), 100);
             ui.arc(0, 0, arcS, arcS, 0, PI);
             arcS += 10;
         }
