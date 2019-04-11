@@ -14,7 +14,7 @@ public class Frames extends UIElement
 
     public void render()
     {
-        ui.stroke(255, 0, 0, 70);
+        ui.stroke(255, 0, 0, 100);
         ui.strokeWeight(3);
 
         // Top Left frame

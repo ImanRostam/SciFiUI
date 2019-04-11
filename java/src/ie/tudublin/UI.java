@@ -17,7 +17,7 @@ public class UI extends PApplet
         element.add(new Scope(60, 60, this));
         element.add(new ReloadButton(50, 50, this));
         element.add(new ReloadBar(50, 50, this));
-        element.add(new RandomButton(50, 50, this));
+        // element.add(new RandomButton(50, 50, this));
         element.add(new Stars(4, 4, this));
         element.add(new Frames(4, 4, this, 30));
         element.add(new RandomBar(50, 50, this));
