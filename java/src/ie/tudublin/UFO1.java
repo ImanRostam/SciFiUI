@@ -6,14 +6,17 @@ public class UFO1 extends UIElement
 {
     protected int colR, colG, colB;
     private boolean damage;
+    protected int licensePlate;
 
-    public UFO1(float x, float y, PApplet ui, int colR, int colG, int colB)
+
+    public UFO1(float x, float y, PApplet ui, int colR, int colG, int colB, int licensePlate)
     {
         super(x, y, ui);
         this.damage = false;
         this.colR = colR;
         this.colG = colG;
         this.colB = colB;
+        this.licensePlate = licensePlate;
     }
 
     public void render()
@@ -40,6 +43,11 @@ public class UFO1 extends UIElement
         // UFO Body Frame
         ui.fill(120);
         ui.ellipse(x, y, 150, 60);
+
+        // UFO Body Design 
+        ui.fill(0);
+        ui.textSize(12);
+        ui.text(("UFO " + licensePlate), x+10, y+5);
     }
 
     public void move1()

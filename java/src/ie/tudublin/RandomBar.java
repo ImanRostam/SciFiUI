@@ -26,3 +26,6 @@ public class RandomBar extends UIElement
         }
     }
 }
+
+// x and y coordinates  shows
+// the random bar moves according to the mouseX, mouseY
