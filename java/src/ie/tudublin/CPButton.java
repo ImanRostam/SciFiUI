@@ -20,5 +20,15 @@ public class CPButton extends UIElement
                 ui.ellipse(500 + posX, ui.height-160+ posY, 15, 15);
             }
         }
+
+        // Right Buttons
+        ui.fill(0, 0, 255);
+        for(int posY = 0; posY<60; posY = posY +20)
+        {
+            for(int posX= 0; posX<120; posX = posX +20)
+            {
+                ui.ellipse(730 + posX, ui.height-160+ posY, 15, 15);
+            }
+        }
     }
 }
