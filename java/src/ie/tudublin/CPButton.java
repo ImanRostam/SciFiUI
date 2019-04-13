@@ -15,7 +15,7 @@ public class CPButton extends UIElement
         ui.fill(0, 0, 255);
         for(int posY = 0; posY<60; posY = posY +20)
         {
-            for(int posX= 0; posX<120; posX = posX +20)
+            for(int posX= 0; posX<140; posX = posX +20)
             {
                 ui.ellipse(500 + posX, ui.height-160+ posY, 15, 15);
             }
@@ -25,10 +25,15 @@ public class CPButton extends UIElement
         ui.fill(0, 0, 255);
         for(int posY = 0; posY<60; posY = posY +20)
         {
-            for(int posX= 0; posX<120; posX = posX +20)
+            for(int posX= 0; posX<140; posX = posX +20)
             {
-                ui.ellipse(730 + posX, ui.height-160+ posY, 15, 15);
+                ui.ellipse(710 + posX, ui.height-160+ posY, 15, 15);
             }
         }
+
+        // Main Button
+        ui.fill(255, 0, 0);
+        ui.stroke(0);
+        ui.ellipse(665, ui.height-140, 50, 50);
     }
 }
