@@ -10,6 +10,7 @@ public class UI extends PApplet
     ArrayList<UFO1> ufo1 = new ArrayList<UFO1>();
     ArrayList<UFO2> ufo2 = new ArrayList<UFO2>();
     ArrayList<Asteroids> ast = new ArrayList<Asteroids>();
+    ArrayList<ScrollHandle> handle = new ArrayList<ScrollHandle>();
 
     public void setup()
     {
@@ -27,7 +28,9 @@ public class UI extends PApplet
         element.add(new UnknownObjects2(0, 0, this));
         element.add(new CPBars(0, 0, this));
         element.add(new ScrollBar(0, 0, this));
-        element.add(new ScrollHandle(0, 0, this));
+        
+        // Scroll Handle
+        handle.add(new ScrollHandle(0, 0, this));
 
         // UFO1 + Alien
         ufo1.add(new UFO1(random(width), random(height), this, 255, 0, 0, (int)(random(100, 500))));
@@ -85,6 +88,14 @@ public class UI extends PApplet
                 ship.setDamage(true);
             }
         }
+
+        // for(ScrollHandle handle : handle)
+        // {
+        //     if(mouseX > 405 || mouseX < 435)
+        //     {
+        //         handle.setSlide(true);
+        //     }
+        // }
     }
 
     public void draw()
@@ -131,6 +142,15 @@ public class UI extends PApplet
         for(UIElement el: element)
         {
             el.render();
+        }
+
+        for(ScrollHandle handle: handle)
+        {
+            handle.render();
+        //     if(handle.isSlide() == true || handle.handleY < height - 95)
+        //     {
+        //         handle.handleY = mouseY;
+        //     }
         }
     }
 

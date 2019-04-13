@@ -19,7 +19,8 @@ public class ScrollBar extends UIElement
 
         // Small Bar
         ui.stroke(127);
+        ui.strokeWeight(2);
         ui.fill(127);
-        ui.rect(419.99f, ui.height-97, 1, ui.height);
+        ui.line(420, ui.height-96, 420, ui.height);
     }
 }
