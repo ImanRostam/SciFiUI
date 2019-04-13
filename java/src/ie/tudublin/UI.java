@@ -28,6 +28,7 @@ public class UI extends PApplet
         element.add(new UnknownObjects2(0, 0, this));
         element.add(new CPBars(0, 0, this));
         element.add(new ScrollBar(0, 0, this));
+        element.add(new CPButton(0, 0, this));
         
         // Scroll Handle
         handle.add(new ScrollHandle(0, 0, this));
