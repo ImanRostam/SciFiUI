@@ -11,12 +11,14 @@ public class CPButton extends UIElement
 
     public void render()
     {
-        int posX = 0;
+        // Left Buttons
         ui.fill(0, 0, 255);
-        for(int i = 0; i<3; i++)
+        for(int posY = 0; posY<60; posY = posY +20)
         {
-            ui.ellipse(550 + posX, ui.height-140, 35, 35);
-            posX = posX + 115;
+            for(int posX= 0; posX<120; posX = posX +20)
+            {
+                ui.ellipse(500 + posX, ui.height-160+ posY, 15, 15);
+            }
         }
     }
 }

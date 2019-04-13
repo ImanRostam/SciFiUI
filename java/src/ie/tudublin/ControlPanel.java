@@ -15,7 +15,7 @@ public class ControlPanel extends UIElement
         ui.stroke(225);
         ui.strokeWeight(2);
         ui.fill(30);
-        ui.ellipse(ui.width/2, ui.height+50, ui.width+100, ui.height-300);
+        ui.ellipse(ui.width/2, ui.height+50, ui.width+100, ui.height-290);
 
         // Control Panel - Big Box
         ui.stroke(0);
