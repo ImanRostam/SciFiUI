@@ -21,7 +21,7 @@ public class CPBars extends UIElement
         ui.fill(ui.random(255), ui.random(255), ui.random(255), 100);
         for(int i = 0; i < 5; i++)
         {
-            ui.rect(250, barsH + x, start+ui.mouseX/moving, 20);
+            ui.rect(210, barsH + x, start+ui.mouseX/moving, 20);
             x = x + 32;
             moving = moving + 6;
             start = start + 2; 
@@ -34,7 +34,7 @@ public class CPBars extends UIElement
         int y =-3;
         for(int i = 0; i < 5; i++)
         {
-            ui.rect(246, barsH+y, 169, 26);
+            ui.rect(206, barsH+y, 169, 26);
             y = y + 32;
         }
     }

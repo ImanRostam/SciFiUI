@@ -11,6 +11,8 @@ public class ScrollBar extends UIElement
 
     public void render()
     {
-        
+        ui.stroke(0);
+        ui.fill(0);
+        ui.rect(415, ui.height-100, 10, ui.height);
     }
 }
