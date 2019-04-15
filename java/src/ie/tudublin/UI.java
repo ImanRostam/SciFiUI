@@ -11,6 +11,7 @@ public class UI extends PApplet
     ArrayList<UFO2> ufo2 = new ArrayList<UFO2>();
     ArrayList<Asteroids> ast = new ArrayList<Asteroids>();
     ArrayList<ScrollHandle> handle = new ArrayList<ScrollHandle>();
+    boolean warp = false;
 
     public void setup()
     {
@@ -104,73 +105,110 @@ public class UI extends PApplet
                 handle.setSlide(false);
             }
         }
+
+        if((mouseX > 641 && mouseX < 689) && (mouseY > 603 && mouseY < 652))
+        {
+            warp = true;
+        }
     }
 
     public void draw()
     {
-        background(0);
-        line(20, 20, mouseX, mouseY);
-        println(mouseX, mouseY);
+        if(warp == false)
+        {
+            background(0);
+            line(20, 20, mouseX, mouseY);
+            println(mouseX, mouseY);
+            
+            for (UFO1 ufo1: ufo1)
+            {
+                if(ufo1.isDamage() == false)
+                {
+                    ufo1.render();
+                    ufo1.move1();
+                }
+            }
+
+            for (UFO2 ufo: ufo2)
+            {
+                if(ufo.isDamage() == false)
+                {
+                    ufo.render();
+                    ufo.move2();
+                }
+            }
+
+            for(Asteroids a: ast)
+            {
+                a.render();
+                float move = random(0,1);
+                if(attack == a.x)
+                {
+                    a.diameter -= 20;
+                    attack = -1;
+                }
+                if(move == 0)
+                {
+                    a.move1();
+                }
+                else
+                {
+                    a.move2();
+                }
+            }
         
-        for (UFO1 ufo1: ufo1)
-        {
-            if(ufo1.isDamage() == false)
+            for(UIElement el: element)
             {
-                ufo1.render();
-                ufo1.move1();
+                el.render();
             }
-        }
 
-        for (UFO2 ufo: ufo2)
-        {
-            if(ufo.isDamage() == false)
+            for(ScrollHandle handle: handle)
             {
-                ufo.render();
-                ufo.move2();
+                handle.render();
+            }
+            
+            for(ScrollHandle handle: handle)
+            {
+                if((mouseY > 670 && mouseY < 766) && (handle.isSlide() == true || handle.handleY < height - 95))
+                {
+                        handle.render();
+                        handle.handleY = mouseY;
+                }
+                else
+                {
+                    handle.handleY = handle.handleY;
+                }
             }
         }
-
-        for(Asteroids a: ast)
+        else
         {
-            a.render();
-            float move = random(0,1);
-            if(attack == a.x)
-            {
-                a.diameter -= 20;
-                attack = -1;
-            }
-            if(move == 0)
-            {
-                a.move1();
-            }
-            else
-            {
-                a.move2();
-            }
-        }
-    
-        for(UIElement el: element)
-        {
-            el.render();
-        }
-
-        for(ScrollHandle handle: handle)
-        {
-            handle.render();
-        }
+            background(0);
         
-        for(ScrollHandle handle: handle)
-        {
-            if((mouseY > 670 && mouseY < 766) && (handle.isSlide() == true || handle.handleY < height - 95))
+            for(UIElement el: element)
             {
-                    handle.render();
-                    handle.handleY = mouseY;
+                el.render();
             }
-            else
+
+            for(ScrollHandle handle: handle)
             {
-                handle.handleY = handle.handleY;
+                handle.render();
             }
+            
+            for(ScrollHandle handle: handle)
+            {
+                if((mouseY > 670 && mouseY < 766) && (handle.isSlide() == true || handle.handleY < height - 95))
+                {
+                        handle.render();
+                        handle.handleY = mouseY;
+                }
+                else
+                {
+                    handle.handleY = handle.handleY;
+                }
+            }
+
         }
+
     }    
 }
 
