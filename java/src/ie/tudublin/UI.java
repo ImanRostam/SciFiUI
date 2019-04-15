@@ -90,18 +90,28 @@ public class UI extends PApplet
             }
         }
 
-        // for(ScrollHandle handle : handle)
-        // {
-        //     if(mouseX > 405 || mouseX < 435)
-        //     {
-        //         handle.setSlide(true);
-        //     }
-        // }
+        for(ScrollHandle handle : handle)
+        {
+            if(mouseX > 405 || mouseX < 435)
+            {
+                handle.setSlide(true);
+            }
+        }
+    }
+
+    public void mousePressed()
+    {
+        for(ScrollHandle handle: handle)
+        {
+            handle.setSlide(false);
+        }
     }
 
     public void draw()
     {
         background(0);
+        line(20, 20, mouseX, mouseY);
+        println(mouseX, mouseY);
         
         for (UFO1 ufo1: ufo1)
         {
@@ -148,10 +158,18 @@ public class UI extends PApplet
         for(ScrollHandle handle: handle)
         {
             handle.render();
-        //     if(handle.isSlide() == true || handle.handleY < height - 95)
-        //     {
-        //         handle.handleY = mouseY;
-        //     }
+        }
+
+        if(mouseY > 670 && mouseY < 766)
+        {
+            for(ScrollHandle handle: handle)
+            {
+                handle.render();
+                if(handle.isSlide() == true || handle.handleY < height - 95)
+                {
+                    handle.handleY = mouseY;
+                }
+            }
         }
     }
 

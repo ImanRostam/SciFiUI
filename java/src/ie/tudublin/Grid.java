@@ -8,7 +8,7 @@ public class Grid extends UIElement
     {
         super(x, y, ui);
     }
-
+ 
     public void render()
     {
         ui.fill(0);
