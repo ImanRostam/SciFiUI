@@ -90,18 +90,22 @@ public class UI extends PApplet
             }
         }
 
-        for(ScrollHandle handle : handle)
-        {
-            if(mouseX > 405 || mouseX < 435)
-            {
-                handle.setSlide(true);
-            }
-        }
+        // for(ScrollHandle handle : handle)
+        // {
+        //     if(mouseX > 405 || mouseX < 435)
+        //     {
+        //         handle.setSlide(true);
+        //     }
+        // }
     }
 
     public void mousePressed()
     {
         for(ScrollHandle handle: handle)
+        if(handle.handleY != mouseY)
+        {
+            handle.setSlide(true);
+        }else if (handle.handleY == mouseY)
         {
             handle.setSlide(false);
         }
@@ -159,19 +163,19 @@ public class UI extends PApplet
         {
             handle.render();
         }
-
-        if(mouseY > 670 && mouseY < 766)
+        
+        for(ScrollHandle handle: handle)
         {
-            for(ScrollHandle handle: handle)
+            if((mouseY > 670 && mouseY < 766) && (handle.isSlide() == true || handle.handleY < height - 95))
             {
-                handle.render();
-                if(handle.isSlide() == true || handle.handleY < height - 95)
-                {
+                    handle.render();
                     handle.handleY = mouseY;
-                }
+            }
+            else
+            {
+                handle.handleY = handle.handleY;
             }
         }
-    }
-
+    }    
 }
 
