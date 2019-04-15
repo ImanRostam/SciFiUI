@@ -89,25 +89,20 @@ public class UI extends PApplet
                 ship.setDamage(true);
             }
         }
-
-        // for(ScrollHandle handle : handle)
-        // {
-        //     if(mouseX > 405 || mouseX < 435)
-        //     {
-        //         handle.setSlide(true);
-        //     }
-        // }
     }
 
     public void mousePressed()
     {
-        for(ScrollHandle handle: handle)
-        if(handle.handleY != mouseY)
+        if((mouseX > 399 && mouseX < 440) && (mouseY > 667 && mouseY < 767))
         {
-            handle.setSlide(true);
-        }else if (handle.handleY == mouseY)
-        {
-            handle.setSlide(false);
+            for(ScrollHandle handle: handle)
+            if(handle.handleY != mouseY)
+            {
+                handle.setSlide(true);
+            }else if (handle.handleY == mouseY)
+            {
+                handle.setSlide(false);
+            }
         }
     }
 
