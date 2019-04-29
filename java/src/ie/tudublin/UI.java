@@ -30,6 +30,7 @@ public class UI extends PApplet
         element.add(new CPBars(0, 0, this));
         element.add(new ScrollBar(0, 0, this));
         element.add(new CPButton(0, 0, this));
+        // element.add(new WarpStars(2, 10, this));
         
         // Scroll Handle
         handle.add(new ScrollHandle(0, 0, this));
@@ -112,13 +113,21 @@ public class UI extends PApplet
         }
     }
 
+    public void keyPressed()
+    {
+        if(key == 's')
+        {
+            warp = false;
+        }
+    }
+
     public void draw()
     {
         if(warp == false)
         {
             background(0);
             line(20, 20, mouseX, mouseY);
-            println(mouseX, mouseY);
+            // println(mouseX, mouseY);
             
             for (UFO1 ufo1: ufo1)
             {
