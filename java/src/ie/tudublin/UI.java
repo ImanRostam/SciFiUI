@@ -7,6 +7,7 @@ import processing.core.PApplet;
 public class UI extends PApplet
 {
     ArrayList<UIElement> element = new ArrayList<UIElement>();
+    ArrayList<Stars> stars = new ArrayList<Stars>();
     ArrayList<UFO1> ufo1 = new ArrayList<UFO1>();
     ArrayList<UFO2> ufo2 = new ArrayList<UFO2>();
     ArrayList<Asteroids> ast = new ArrayList<Asteroids>();
@@ -20,7 +21,6 @@ public class UI extends PApplet
         element.add(new ReloadButton(50, 50, this));
         element.add(new ReloadBar(50, 50, this));
         // element.add(new RandomButton(50, 50, this));
-        element.add(new Stars(4, 4, this));
         element.add(new Frames(4, 4, this, 30));
         element.add(new RandomBar(50, 50, this));
         element.add(new ControlPanel(0, 0, this));
@@ -32,6 +32,9 @@ public class UI extends PApplet
         element.add(new CPButton(0, 0, this));
         // element.add(new WarpStars(2, 10, this));
         
+        // Stars
+        stars.add(new Stars(4, 4, this));
+
         // Scroll Handle
         handle.add(new ScrollHandle(0, 0, this));
 
@@ -126,9 +129,14 @@ public class UI extends PApplet
         if(warp == false)
         {
             background(0);
-            line(20, 20, mouseX, mouseY);
+            // line(20, 20, mouseX, mouseY);
             // println(mouseX, mouseY);
             
+            for(Stars stars: stars)
+            {
+                stars.render();
+            }
+
             for (UFO1 ufo1: ufo1)
             {
                 if(ufo1.isDamage() == false)
@@ -170,7 +178,7 @@ public class UI extends PApplet
             {
                 el.render();
             }
-
+            
             for(ScrollHandle handle: handle)
             {
                 handle.render();
@@ -192,28 +200,10 @@ public class UI extends PApplet
         else
         {
             background(0);
-        
-            for(UIElement el: element)
-            {
-                el.render();
-            }
-
-            for(ScrollHandle handle: handle)
-            {
-                handle.render();
-            }
             
-            for(ScrollHandle handle: handle)
+            for(Stars stars: stars)
             {
-                if((mouseY > 670 && mouseY < 766) && (handle.isSlide() == true || handle.handleY < height - 95))
-                {
-                        handle.render();
-                        handle.handleY = mouseY;
-                }
-                else
-                {
-                    handle.handleY = handle.handleY;
-                }
+                stars.render();
             }
 
         }
