@@ -10,6 +10,7 @@ Fork this repository and use it a starter project for your assignment
 For this OOP assignment I had to create a Sci-Fi User Interface. For my assignment I based it on the idea of spaceships, aliens and space in general. The UI allows the user to kill aliens and shoot down asteroids. Turn off the lights to experience and admire the stars and asteroids from inside The Grand 3000. 
 
 # Instructions
+<<<<<<< Updated upstream
 Once the program runs, users will be greeted with the view of the blinking stars and moving asteroids as if they are inside the spaceship, *The Grand 3000*. Audio files, ComputerSound.mp3 and SpaceShip.mp3, will be playing in the background. 
 
 The red, blue, purple and white spinning scope will follow the location of the mouseX. 
@@ -23,6 +24,9 @@ Once the user is ready to kick some butt, the user can press on the 'START' butt
 While the user is on 'the killing mode', they can also destroy the asteroids by clicking on them. The asteroids will become smaller and smaller and eventually it will disappear. 
 
 The user can enjoy and admire the stars and asteroids when the lights inside the spaceship is turned off by pressing the 'OFF' button. Audio files, Space.mp3 and Asteroids.mp3, will be played in the background for the user to relax.
+=======
+Once the program is run, users will be greeted with the view of the stars and asteroids. 
+>>>>>>> Stashed changes
 
 # How it works
 These are the following classes made for this assignment:
