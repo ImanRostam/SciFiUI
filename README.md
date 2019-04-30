@@ -47,6 +47,11 @@ The control panels design was made up of different classes:
 #### Scope Class
 This class drew the circle scope that follows the mouseX and mouseY. I made the rotation of the arcs using pushMatrix(), translate(), rotate() and popMatrix() methods.
 
+#### UFO Classes
+I made 2 classes for UFO: UFO 1 and UFO 2. Both class carries the same functions the only different is that the alien and UFO itself in UFO1 class is bigger than the one in UFO2 class. The alien and UFO in UFO2 class also moves at a faster speed.
+
+
+
 # What I am most proud of in the assignment
 
 # Markdown Tutorial
