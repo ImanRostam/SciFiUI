@@ -27,23 +27,25 @@ The user can enjoy and admire the stars and asteroids when the lights inside the
 # How it works
 These are the following classes made for this assignment:
 
-##### Main Class 
+#### Main Class 
 The UI class is main class and where everything is called and rendered. This class includes array lists, the declaration of array lists, mouseClicked methods, mousePressed methods and keyPressed methods. 
 
-##### Super Class
+#### Super Class
 The UIElement class is the super class which all classes will need to inherit.
 
-##### Control Panel
+#### Control Panel
 The control panels design was made up of different classes: 
 - Control Panel class - This drew the control panel itself and the boxes
 - CPBars class - This drew the bar left side of the control panel, this is the one that will move right to left following the mouseX
-- CPButton class - This drew the small blue buttons and the red 'OFF' button. The 'OFF' button will bring you to another page, the LightsOff class.
+- CPButton class - This drew the small blue buttons and the red 'OFF' button. The 'OFF' button will bring you to another page, the LightsOff class
 - Grid class - This drew the red grid
 - UnknownObjects1 class and UnknownObjects2 class - This is the random ellipse shapes that appears on the grid
 - Info class - Using a csv file to load the text 'The Grand 3000'
 - ScrollBar class - This drew the scroll bar 
 - ScrollHandle class - This drew the handle, the sliding of the handle was implemented in the main class, UI class
 
+#### Scope Class
+This class drew the circle scope that follows the mouseX and mouseY. I made the rotation of the arcs using pushMatrix(), translate(), rotate() and popMatrix() methods.
 
 # What I am most proud of in the assignment
 
