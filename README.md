@@ -56,13 +56,13 @@ I made 2 classes for UFO: UFO 1 and UFO 2. Both class carries the same functions
 
 
 ### Home page
-![An image](images/Home.png)
+![An image](SciFiUi/images/Home.png)
 
 ### Killing Mode Page
-![An image](images/KillingMode.PNG)
+![An image](images/KillingMode.png)
 
 ### Lights Off Mode
-![An image](images/LightsOff.PNG)
+![An image](images/LightsOff.png)
 
 # Markdown Tutorial
 
