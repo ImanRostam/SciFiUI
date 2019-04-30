@@ -2,9 +2,9 @@ package ie.tudublin;
 
 import processing.core.PApplet;
 
-public class ReloadButton extends UIElement
+public class StartButton extends UIElement
 {
-    public ReloadButton(float x, float y, PApplet ui)
+    public StartButton(float x, float y, PApplet ui)
     {
         super(x, y, ui);
     }

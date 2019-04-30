@@ -17,6 +17,7 @@ public class UI extends PApplet
     ArrayList<Asteroids> ast = new ArrayList<Asteroids>();
     ArrayList<ScrollHandle> handle = new ArrayList<ScrollHandle>();
     boolean lightsOff = false;
+    int draw = 0;
 
     // SoundEffect
     AudioPlayer ComputerSound, SpaceShip;
@@ -32,7 +33,7 @@ public class UI extends PApplet
 
         // All the Shapes
         element.add(new Scope(60, 60, this));
-        element.add(new ReloadButton(50, 50, this));
+        element.add(new StartButton(50, 50, this));
         element.add(new ReloadBar(50, 50, this));
         // element.add(new RandomButton(50, 50, this));
         element.add(new Frames(4, 4, this, 30));
@@ -135,6 +136,11 @@ public class UI extends PApplet
         {
             lightsOff = true;
         }
+
+        if((mouseX > 50 && mouseX < 195) && (mouseY > height-280 && mouseY < height-210))
+        {
+            draw = 1;
+        }
     }
 
     public void keyPressed()
@@ -150,12 +156,10 @@ public class UI extends PApplet
         if(lightsOff == false)
         {
             // Audio
-            
             if(!ComputerSound.isPlaying())
             {
                 ComputerSound.play();
                 ComputerSound.rewind();
-                ComputerSound.play();
             }
 
             if(!SpaceShip.isPlaying())
@@ -166,24 +170,6 @@ public class UI extends PApplet
 
             background(0);
             
-            for (UFO1 ufo1: ufo1)
-            {
-                if(ufo1.isDamage() == false)
-                {
-                    ufo1.render();
-                    ufo1.move1();
-                }
-            }
-
-            for (UFO2 ufo: ufo2)
-            {
-                if(ufo.isDamage() == false)
-                {
-                    ufo.render();
-                    ufo.move2();
-                }
-            }
-
             for(Asteroids a: ast)
             {
                 a.render();
@@ -202,7 +188,29 @@ public class UI extends PApplet
                     a.move2();
                 }
             }
-            
+
+            if(draw == 1)
+                {
+                    for (UFO1 ufo1: ufo1)
+                    {
+                        if(ufo1.isDamage() == false)
+                        {
+                            ufo1.render();
+                            ufo1.move1();
+                        }
+                    }
+
+                    for (UFO2 ufo: ufo2)
+                    {
+                        if(ufo.isDamage() == false)
+                        {
+                            ufo.render();
+                            ufo.move2();
+                        }
+                    }
+
+                }
+                
             for(Stars stars: stars)
             {
                 stars.render();
@@ -262,7 +270,6 @@ public class UI extends PApplet
                 ast.move2();
             }
         }
-
     }    
 }
 
