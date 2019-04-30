@@ -16,10 +16,11 @@ public class UI extends PApplet
     ArrayList<UFO2> ufo2 = new ArrayList<UFO2>();
     ArrayList<Asteroids> ast = new ArrayList<Asteroids>();
     ArrayList<ScrollHandle> handle = new ArrayList<ScrollHandle>();
-    boolean warp = false;
+    boolean lightsOff = false;
 
     // SoundEffect
-    AudioPlayer ComputerSound;
+    AudioPlayer ComputerSound, SpaceShip;
+    AudioPlayer Asteroids, Space;
     Minim minim;
     AudioInput ai;
 
@@ -72,6 +73,9 @@ public class UI extends PApplet
         // Sound
         minim = new Minim(this);
         ComputerSound = minim.loadFile("ComputerSound.mp3");
+        SpaceShip = minim.loadFile("SpaceShip.mp3");
+        Asteroids = minim.loadFile("Asteroids.mp3");
+        Space = minim.loadFile("Space.mp3");
     }
 
     public void settings()
@@ -129,7 +133,7 @@ public class UI extends PApplet
 
         if((mouseX > 641 && mouseX < 689) && (mouseY > 603 && mouseY < 652))
         {
-            warp = true;
+            lightsOff = true;
         }
     }
 
@@ -137,18 +141,30 @@ public class UI extends PApplet
     {
         if(key == 's')
         {
-            warp = false;
+            lightsOff = false;
         }
     }
 
     public void draw()
     {
-        if(warp == false)
+        if(lightsOff == false)
         {
-            ComputerSound.play();
+            // Audio
+            
+            if(!ComputerSound.isPlaying())
+            {
+                ComputerSound.play();
+                ComputerSound.rewind();
+                ComputerSound.play();
+            }
+
+            if(!SpaceShip.isPlaying())
+            {
+                SpaceShip.rewind();
+                SpaceShip.play();
+            }
+
             background(0);
-            line(20, 20, mouseX, mouseY);
-            // println(mouseX, mouseY);
             
             for (UFO1 ufo1: ufo1)
             {
@@ -217,6 +233,21 @@ public class UI extends PApplet
         }
         else
         {
+            // //Sound
+            // Asteroids.play();
+            // Space.play();
+            if(!Asteroids.isPlaying())
+            {
+                Asteroids.rewind();
+                Asteroids.play();
+            }
+
+            if(!Space.isPlaying())
+            {
+                Space.rewind();
+                Space.play();
+            }
+
             background(0);
 
             for(LightsOff off: off)
