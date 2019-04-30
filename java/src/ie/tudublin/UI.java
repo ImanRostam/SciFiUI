@@ -16,6 +16,7 @@ public class UI extends PApplet
     ArrayList<UFO2> ufo2 = new ArrayList<UFO2>();
     ArrayList<Asteroids> ast = new ArrayList<Asteroids>();
     ArrayList<ScrollHandle> handle = new ArrayList<ScrollHandle>();
+    ArrayList<LicensePlate> number = new ArrayList<LicensePlate>();
     boolean lightsOff = false;
     int draw = 0;
 
