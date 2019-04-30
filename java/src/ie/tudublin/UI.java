@@ -153,6 +153,11 @@ public class UI extends PApplet
         {
             lightsOff = false;
         }
+
+        if(key == 'a')
+        {
+            draw = 0;
+        }
     }
 
     public void loadName()
