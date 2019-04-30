@@ -12,7 +12,7 @@ For this OOP assignment I had to create a Sci-Fi User Interface. For my assignme
 # Instructions
 Once the program runs, users will be greeted with the view of the blinking stars and moving asteroids as if they are inside the spaceship, *The Grand 3000*. Audio files, ComputerSound.mp3 and SpaceShip.mp3, will be playing in the background. 
 
-The red, blue, purple and white spinning scope will follow the location of the mouseX and mouseY. 
+The red, blue, purple and white spinning scope will follow the location of the mouseX. 
 
 The bar chart on the right side will change colour base on the location of mouseX and mouseY. The bar chart on the control panel section will also move right to left according to the mouseX and mouseY. 
 
@@ -27,8 +27,22 @@ The user can enjoy and admire the stars and asteroids when the lights inside the
 # How it works
 These are the following classes made for this assignment:
 
-UI class 
-- The main class and where everything is drawn
+###### Main Class 
+The UI class is main class and where everything is called and rendered. This class includes array lists, the declaration of array lists, mouseClicked methods, mousePressed methods and keyPressed methods. 
+
+###### Super Class
+The UIElement class is the super class which all classes will need to inherit.
+
+###### Control Panel
+The control panels design was made up of different classes: 
+- Control Panel class - This drew the control panel itself and the boxes
+- CPBars class - This drew the bar left side of the control panel, this is the one that will move right to left following the mouseX
+- CPButton class - This drew the small blue buttons and the red 'OFF' button. The 'OFF' button will bring you to another page, the LightsOff class.
+- Grid class - This drew the red grid
+- UnknownObjects1 class and UnknownObjects2 class - This is the random ellipse shapes that appears on the grid
+- Info class - Using a csv file to load the text 'The Grand 3000'
+- ScrollBar class - This drew the scroll bar 
+- ScrollHandle class - This drew the handle, the sliding of the handle was implemented in the main class, UI class
 
 
 # What I am most proud of in the assignment
