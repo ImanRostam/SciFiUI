@@ -58,6 +58,12 @@ I made 2 classes for UFO: UFO 1 and UFO 2. Both class carries the same functions
 ### Home page
 ![An image](images/Home.png)
 
+### Killing Mode Page
+![An image](images/KillingMode.PNG)
+
+### Lights Off Mode
+![An image](images/LightsOff.PNG)
+
 # Markdown Tutorial
 
 This is *emphasis*
