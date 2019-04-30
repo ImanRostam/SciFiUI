@@ -27,13 +27,13 @@ The user can enjoy and admire the stars and asteroids when the lights inside the
 # How it works
 These are the following classes made for this assignment:
 
-###### Main Class 
+##### Main Class 
 The UI class is main class and where everything is called and rendered. This class includes array lists, the declaration of array lists, mouseClicked methods, mousePressed methods and keyPressed methods. 
 
-###### Super Class
+##### Super Class
 The UIElement class is the super class which all classes will need to inherit.
 
-###### Control Panel
+##### Control Panel
 The control panels design was made up of different classes: 
 - Control Panel class - This drew the control panel itself and the boxes
 - CPBars class - This drew the bar left side of the control panel, this is the one that will move right to left following the mouseX
