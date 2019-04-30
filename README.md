@@ -54,6 +54,10 @@ I made 2 classes for UFO: UFO 1 and UFO 2. Both class carries the same functions
 
 # What I am most proud of in the assignment
 
+
+### Home page
+![An image](images/Home.png)
+
 # Markdown Tutorial
 
 This is *emphasis*
