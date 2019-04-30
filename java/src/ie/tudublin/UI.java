@@ -6,8 +6,9 @@ import processing.core.PApplet;
 
 public class UI extends PApplet
 {
-    ArrayList<UIElement> element = new ArrayList<UIElement>();
     ArrayList<Stars> stars = new ArrayList<Stars>();
+    ArrayList<LightsOff> off = new ArrayList<LightsOff>();
+    ArrayList<UIElement> element = new ArrayList<UIElement>();
     ArrayList<UFO1> ufo1 = new ArrayList<UFO1>();
     ArrayList<UFO2> ufo2 = new ArrayList<UFO2>();
     ArrayList<Asteroids> ast = new ArrayList<Asteroids>();
@@ -16,6 +17,10 @@ public class UI extends PApplet
 
     public void setup()
     {
+        
+        // Stars
+        element.add(new Stars(4, 4, this));
+
         // All the Shapes
         element.add(new Scope(60, 60, this));
         element.add(new ReloadButton(50, 50, this));
@@ -31,12 +36,12 @@ public class UI extends PApplet
         element.add(new ScrollBar(0, 0, this));
         element.add(new CPButton(0, 0, this));
         // element.add(new WarpStars(2, 10, this));
-        
-        // Stars
-        stars.add(new Stars(4, 4, this));
 
         // Scroll Handle
         handle.add(new ScrollHandle(0, 0, this));
+
+        // Lights off
+        off.add(new LightsOff(5, 5, this));
 
         // UFO1 + Alien
         ufo1.add(new UFO1(random(width), random(height), this, 255, 0, 0, (int)(random(100, 500))));
@@ -129,14 +134,9 @@ public class UI extends PApplet
         if(warp == false)
         {
             background(0);
-            // line(20, 20, mouseX, mouseY);
+            line(20, 20, mouseX, mouseY);
             // println(mouseX, mouseY);
             
-            for(Stars stars: stars)
-            {
-                stars.render();
-            }
-
             for (UFO1 ufo1: ufo1)
             {
                 if(ufo1.isDamage() == false)
@@ -173,12 +173,17 @@ public class UI extends PApplet
                     a.move2();
                 }
             }
-        
+            
+            for(Stars stars: stars)
+            {
+                stars.render();
+            }
+
             for(UIElement el: element)
             {
                 el.render();
             }
-            
+
             for(ScrollHandle handle: handle)
             {
                 handle.render();
@@ -200,12 +205,18 @@ public class UI extends PApplet
         else
         {
             background(0);
-            
-            for(Stars stars: stars)
+
+            for(LightsOff off: off)
             {
-                stars.render();
+                off.render();
             }
 
+            for(Asteroids ast: ast)
+            {
+                ast.render();
+                ast.render();
+                ast.move2();
+            }
         }
 
     }    
