@@ -7,8 +7,10 @@ Student Number: C17367011
 Fork this repository and use it a starter project for your assignment
 
 # Description of the assignment
+For this OOP assignment I had to create a Sci-Fi User Interface. For my assignment I based it on the idea of spaceships, aliens and space in general. The UI allows the user to kill aliens and shoot down asteroids. It also allows users to turn the lights off and admire the stars and asteroids. 
 
 # Instructions
+Once the program is run, users will be greeted with the view of the stars, asteroids and the aliens. 
 
 # How it works
 
