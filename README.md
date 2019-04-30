@@ -10,7 +10,6 @@ Fork this repository and use it a starter project for your assignment
 For this OOP assignment I had to create a Sci-Fi User Interface. For my assignment I based it on the idea of spaceships, aliens and space in general. The UI allows the user to kill aliens and shoot down asteroids. Turn off the lights to experience and admire the stars and asteroids from inside The Grand 3000. 
 
 # Instructions
-<<<<<<< Updated upstream
 Once the program runs, users will be greeted with the view of the blinking stars and moving asteroids as if they are inside the spaceship, *The Grand 3000*. Audio files, ComputerSound.mp3 and SpaceShip.mp3, will be playing in the background. 
 
 The red, blue, purple and white spinning scope will follow the location of the mouseX. 
@@ -51,40 +50,28 @@ This class drew the circle scope that follows the mouseX and mouseY. I made the 
 #### UFO Classes
 I made 2 classes for UFO: UFO 1 and UFO 2. Both class carries the same functions the only different is that the alien and UFO itself in UFO1 class is bigger than the one in UFO2 class. The alien and UFO in UFO2 class also moves at a faster speed.
 
+#### Button Class
+I made a StartButton class that will make the aliens appear (once the 'START' button is clicked) so the user can kill the aliens. 
+
+#### Frames Class
+This class creates the red edges on the UI
+
+#### Stars Class
+This class creates the background stars. I used ellipse and placed it at random height and width to create the blinking stars effect
+
+#### LightsOff Class
+Once the 'OFF' button is clicked the LightsOff background will appear
+
+#### Asteroids Class
+The asteroids were built in this class and the movement of the asteroids were also implemented in this class. The movement from one side of the screen to the other and it will reappear once it reaches the edges of the screen.
+
+#### Bar Class
+Bottom right section of the UI screen has a bar chart. The bar chart changes colour depending on the mouseX and mouseY
+
+#### Filler Classes
+I created 2 classes: RandomButton and ReloadBar classes to fill up my UI screen. It doesn't have any special feautures
 
 # What I am most proud of in the assignment
-
-
-### Home page
-![An image](images/Home.png)
-
-### Killing Mode Page
-![An image](images/KillingMode.PNG)
-
-### Lights Off Mode
-![An image](images/LightsOff.PNG)
-
-# Markdown Tutorial
-
-This is *emphasis*
-
-This is a bulleted list
-
-- Item
-- Item
-
-This is a numbered list
-
-1. Item
-1. Item
-
-This is a [hyperlink](http://bryanduggan.org)
-
-# Headings
-## Headings
-#### Headings
-##### Headings
-
 This is code:
 
 ```Java
@@ -111,24 +98,23 @@ public void render()
 }
 ```
 
-This is an image using a relative URL:
 
-![An image](images/p8.png)
+## Images
+### Home page
+![An image](images/Home.png)
 
-This is an image using an absolute URL:
+### Killing Mode Page
+![An image](images/KillingMode.PNG)
 
-![A different image](https://bryanduggandotorg.files.wordpress.com/2019/02/infinite-forms-00045.png?w=595&h=&zoom=2)
+### Lights Off Mode
+![An image](images/LightsOff.PNG)
 
-This is a youtube video:
+## Youtube 
 
 [![YouTube](http://img.youtube.com/vi/J2kHSSFA4NU/0.jpg)](https://www.youtube.com/watch?v=J2kHSSFA4NU)
 
-This is a table:
+### MY info.csv File:
 
-| Heading 1 | Heading 2 |
-|-----------|-----------|
-|Some stuff | Some more stuff in this column |
-|Some stuff | Some more stuff in this column |
-|Some stuff | Some more stuff in this column |
-|Some stuff | Some more stuff in this column |
-
+| Name:          |           |
+|----------------|-----------|
+| The Grand 3000 |           |
