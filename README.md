@@ -23,10 +23,7 @@ Once the user is ready to kick some butt, the user can press on the 'START' butt
 
 While the user is on 'the killing mode', they can also destroy the asteroids by clicking on them. The asteroids will become smaller and smaller and eventually it will disappear. 
 
-The user can enjoy and admire the stars and asteroids when the lights inside the spaceship is turned off by pressing the 'OFF' button. Audio files, Space.mp3 and Asteroids.mp3, will be played in the background for the user to relax.
-=======
-Once the program is run, users will be greeted with the view of the stars and asteroids. 
->>>>>>> Stashed changes
+The user can enjoy and admire the stars and asteroids when the lights inside the spaceship is turned off by pressing the 'OFF' button. Audio files, Space.mp3 and Asteroids.mp3, will be played in the background for the user to relax. Once the program is run, users will be greeted with the view of the stars and asteroids. 
 
 # How it works
 These are the following classes made for this assignment:
@@ -53,7 +50,6 @@ This class drew the circle scope that follows the mouseX and mouseY. I made the 
 
 #### UFO Classes
 I made 2 classes for UFO: UFO 1 and UFO 2. Both class carries the same functions the only different is that the alien and UFO itself in UFO1 class is bigger than the one in UFO2 class. The alien and UFO in UFO2 class also moves at a faster speed.
-
 
 
 # What I am most proud of in the assignment
