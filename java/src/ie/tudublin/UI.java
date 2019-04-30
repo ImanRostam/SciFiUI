@@ -1,6 +1,7 @@
 package ie.tudublin;
 
 import java.util.ArrayList;
+import processing.data.*;
 
 import ddf.minim.AudioInput;
 import ddf.minim.AudioPlayer;
@@ -16,7 +17,7 @@ public class UI extends PApplet
     ArrayList<UFO2> ufo2 = new ArrayList<UFO2>();
     ArrayList<Asteroids> ast = new ArrayList<Asteroids>();
     ArrayList<ScrollHandle> handle = new ArrayList<ScrollHandle>();
-    ArrayList<LicensePlate> number = new ArrayList<LicensePlate>();
+    private ArrayList<Info> info = new ArrayList<Info>();
     boolean lightsOff = false;
     int draw = 0;
 
@@ -78,6 +79,8 @@ public class UI extends PApplet
         SpaceShip = minim.loadFile("SpaceShip.mp3");
         Asteroids = minim.loadFile("Asteroids.mp3");
         Space = minim.loadFile("Space.mp3");
+
+        loadName();
     }
 
     public void settings()
@@ -152,6 +155,30 @@ public class UI extends PApplet
         }
     }
 
+    public void loadName()
+    {
+        Table table = loadTable("info.csv", "header");
+        for(TableRow row : table.rows())
+        {
+            Info nameInfo = new Info(row);
+            info.add(nameInfo);
+        }
+    }
+
+    public void drawName()
+    {
+        for(Info nameInfo : info)
+        {
+            stroke(255);
+            fill(0);
+            textSize(20);
+            textAlign(CENTER);
+            text(nameInfo.getName(), 670, 740);
+            noFill();
+            noStroke();
+        }
+    }
+
     public void draw()
     {
         if(lightsOff == false)
@@ -220,6 +247,10 @@ public class UI extends PApplet
             for(UIElement el: element)
             {
                 el.render();
+                for(int i = 0; i < info.size(); i++)
+                {
+                    drawName();
+                }
             }
 
             for(ScrollHandle handle: handle)
