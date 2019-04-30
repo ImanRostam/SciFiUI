@@ -2,6 +2,9 @@ package ie.tudublin;
 
 import java.util.ArrayList;
 
+import ddf.minim.AudioInput;
+import ddf.minim.AudioPlayer;
+import ddf.minim.Minim;
 import processing.core.PApplet;
 
 public class UI extends PApplet
@@ -14,6 +17,11 @@ public class UI extends PApplet
     ArrayList<Asteroids> ast = new ArrayList<Asteroids>();
     ArrayList<ScrollHandle> handle = new ArrayList<ScrollHandle>();
     boolean warp = false;
+
+    // SoundEffect
+    AudioPlayer ComputerSound;
+    Minim minim;
+    AudioInput ai;
 
     public void setup()
     {
@@ -60,6 +68,10 @@ public class UI extends PApplet
         ast.add(new Asteroids(random(width-100), random(height), this, 60, 192, 192, 192));
         ast.add(new Asteroids(random(width-50), random(height), this, 60, 128, 43, 0));
         ast.add(new Asteroids(random(width), random(height), this, 60, 169, 169, 169));
+    
+        // Sound
+        minim = new Minim(this);
+        ComputerSound = minim.loadFile("ComputerSound.mp3");
     }
 
     public void settings()
@@ -133,6 +145,7 @@ public class UI extends PApplet
     {
         if(warp == false)
         {
+            ComputerSound.play();
             background(0);
             line(20, 20, mouseX, mouseY);
             // println(mouseX, mouseY);
