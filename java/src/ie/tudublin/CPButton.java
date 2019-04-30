@@ -35,5 +35,9 @@ public class CPButton extends UIElement
         ui.fill(255, 0, 0);
         ui.stroke(0);
         ui.ellipse(665, ui.height-140, 50, 50);
+
+        ui.fill(0);
+        ui.textSize(12);
+        ui.text(("OFF"), 665, ui.height-135);
     }
 }
