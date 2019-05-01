@@ -22,7 +22,7 @@ Once the user is ready to kick some butt, the user can press on the '*START*' bu
 
 While the user is on '*the killing mode*', they can also destroy the asteroids by clicking on them. The asteroids will become smaller and smaller and eventually it will disappear. 
 
-The user can enjoy and admire the stars and asteroids when the lights inside the spaceship is turned off by pressing the '*OFF*' button. Audio files, Space.mp3 and Asteroids.mp3, will be played in the background for the user to relax. Once the program is run, users will be greeted with the view of the stars and asteroids. 
+The user can enjoy and admire the stars and asteroids when the lights inside the spaceship is turned off by pressing the '*OFF*' button. Audio files, Space.mp3 and Asteroids.mp3, will be played in the background for the user to relax. Once the program is run, users will be greeted with the view of the stars and asteroids. Once the user would like to exit the lights off mode, the user can pressed key '*s*' and it will bring them back to the starting page
 
 # How it works
 These are the following classes made for this assignment:
