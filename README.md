@@ -72,7 +72,9 @@ Bottom right section of the UI screen has a bar chart. The bar chart changes col
 I created 2 classes: RandomButton and ReloadBar classes to fill up my UI screen. It doesn't have any special feautures
 
 # What I am most proud of in the assignment
-What I'm most proud of in my assignment is being able to implement the shooting and killing of the aliens. It was a tricky challenge for me since it was the first time I came across this situation while doing the assignment. It took me a while to figure out how to do it but I managed to find the way. After implementing it for the aliens, I also implemented it for the asteroids. And personally, I am proud of myself after doing this assignment because I actually had to think hard of what I needed to code in order to follow the plan that I drew. There were times when I woke up in the middle of the night with an idea of code to implement and straight away I would type it into my phone and try it the next day and most of the time it works. The basic idea for the implementation of the killing of aliens was actually one of those 'middle of the night' idea. 
+What I'm most proud of in my assignment is being able to implement the shooting and killing of the aliens. It was a tricky challenge for me since it was the first time I came across this situation while doing the assignment. It took me a while to figure out how to do it but I managed to find the way. After implementing it for the aliens, I also implemented it for the asteroids. 
+
+Personally, I am proud of myself after doing this assignment because I actually had to think hard of what I needed to code in order to follow the plan that I drew. There were times when I woke up in the middle of the night with an idea of code to implement and straight away I would type it into my phone and try it the next day and most of the time it works. The basic idea for the implementation of the killing of aliens was actually one of those 'middle of the night' idea. 
 
 ## Images
 ### Start page
