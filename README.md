@@ -111,7 +111,7 @@ public void render()
 
 ## Youtube 
 
-[![YouTube](http://img.youtube.com/vi/J2kHSSFA4NU/0.jpg)](https://youtu.be/d8lFO6YR4hU)
+[![YouTube](images/KillingMode.PNG)](https://youtu.be/d8lFO6YR4hU)
 
 ### MY info.csv File:
 
